@@ -20,34 +20,53 @@ public class CameraZoom : MonoBehaviour {
 	[SerializeField]
 	private Margins screenMargins;
 
-	void Start() {
 
-	}
 
 	void Update() {
-
+		if (!IsAllOnScreen()) {
+			ZoomOut();
+		} else if (IsAllOnScreen(2)) {
+			ZoomIn();
+		}
 	}
 
-	public bool IsAllOnScreen() {
-		return false;
+	public bool IsAllOnScreen(float marginMultiplier = 1) {
+		bool ret = true;
+
+		foreach (Vector2 position in PlayerManager.instance.GetPlayerPositions()) {
+
+			Vector2 screenPos = Camera.main.WorldToViewportPoint(position);
+
+			if (screenPos.x < ((differentMargins ? screenMargins.left : screenMargin) * marginMultiplier)) ret = false;
+			if (screenPos.x > 1 - ((differentMargins ? screenMargins.right : screenMargin))) ret = false;
+			if (screenPos.y < ((differentMargins ? screenMargins.down : screenMargin) * marginMultiplier)) ret = false;
+			if (screenPos.y > 1 - ((differentMargins ? screenMargins.up : screenMargin) * marginMultiplier)) ret = false;
+
+		}
+
+		return ret;
 	}
 
 	public bool ZoomOut() {
+		bool ret = false;
 		float newZoom = Mathf.MoveTowards(Camera.main.orthographicSize, maxZoom, Time.deltaTime * smoothFactor);
 		if (newZoom > maxZoom) {
 			newZoom = maxZoom;
-			return true;
+			ret = true;
 		}
-		return false;
+		Camera.main.orthographicSize = newZoom;
+		return ret;
 	}
 
 	public bool ZoomIn() {
+		bool ret = false;
 		float newZoom = Mathf.MoveTowards(Camera.main.orthographicSize, minZoom, Time.deltaTime * smoothFactor);
-		if (newZoom > minZoom) {
+		if (newZoom < minZoom) {
 			newZoom = minZoom;
-			return true;
+			ret = true;
 		}
-		return false;
+		Camera.main.orthographicSize = newZoom;
+		return ret;
 	}
 
 }
