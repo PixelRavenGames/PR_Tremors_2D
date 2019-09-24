@@ -21,11 +21,10 @@ public class CameraZoom : MonoBehaviour {
 	private Margins screenMargins;
 
 
-
 	void Update() {
 		if (!IsAllOnScreen()) {
 			ZoomOut();
-		} else if (IsAllOnScreen(2)) {
+		} else if (IsAllOnScreen(2f)) {
 			ZoomIn();
 		}
 	}
@@ -38,7 +37,7 @@ public class CameraZoom : MonoBehaviour {
 			Vector2 screenPos = Camera.main.WorldToViewportPoint(position);
 
 			if (screenPos.x < ((differentMargins ? screenMargins.left : screenMargin) * marginMultiplier)) ret = false;
-			if (screenPos.x > 1 - ((differentMargins ? screenMargins.right : screenMargin))) ret = false;
+			if (screenPos.x > 1 - ((differentMargins ? screenMargins.right : screenMargin) * marginMultiplier)) ret = false;
 			if (screenPos.y < ((differentMargins ? screenMargins.down : screenMargin) * marginMultiplier)) ret = false;
 			if (screenPos.y > 1 - ((differentMargins ? screenMargins.up : screenMargin) * marginMultiplier)) ret = false;
 

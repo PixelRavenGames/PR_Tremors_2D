@@ -5,12 +5,14 @@ using UnityEngine;
 public class PlayerHumanController : IHumanController {
 
 	protected int controllerNum = 0;
+	protected Human human;
 
 	private Vector2 movement = Vector2.zero;
 	private bool jumpButton = false;
 
-	public PlayerHumanController(int controllerNum) {
+	public PlayerHumanController(int controllerNum, Human human) {
 		this.controllerNum = controllerNum;
+		this.human = human;
 	}
 
 	public bool GetJumpButton() {

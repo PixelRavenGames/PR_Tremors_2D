@@ -31,13 +31,11 @@ public class Human : MonoBehaviour {
 
 	void Start() {
 		rb = GetComponent<Rigidbody2D>();
-
-		// TMP
-		ChangeController(new PlayerHumanController(controllerNum));
-		// ---
 	}
 
 	void Update() {
+		if (control == null) return;
+
 		if (rb.velocity.y < 0) {
 			rb.velocity += Vector2.up * Physics2D.gravity.y * (fallModifier - 1) * Time.deltaTime;
 		}
@@ -53,18 +51,6 @@ public class Human : MonoBehaviour {
 		} else {
 			jumpHeldTime = 0;
 		}
-
-		//if (jumpHeldTime > 0) {
-		//	if (IsJumpUp()) {
-		//		jumpHeldTime = 0;
-		//	} else {
-		//		jumpHeldTime += Time.deltaTime;
-		//		if (jumpHeldTime >= maxJumpHeld) jumpHeldTime = 0;
-		//		Jump(jumpHeldTime);
-		//	}
-		//} else if (IsJumpDown()) {
-		//	jumpHeldTime += Time.deltaTime;
-		//}
 		
 	}
 
