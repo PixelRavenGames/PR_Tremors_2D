@@ -25,6 +25,7 @@ public class PlayerManager : MonoBehaviour {
 
 		if (previousJoysticks == null) {
 			previousJoysticks = new string[joysticks.Length];
+			for (int i = 0; i < humans.Length; i++) humans[i].ChangeController(new BotHumanController(i + 1, humans[i], botSettings));
 		}
 
 		for (int i = 0; i < humans.Length; i++) {
