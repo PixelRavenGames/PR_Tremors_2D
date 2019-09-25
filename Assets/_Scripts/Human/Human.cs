@@ -9,6 +9,7 @@ public class Human : MonoBehaviour {
 	public int controllerNum = 0;
 
 	private IHumanController control;
+	private bool controllerConnected = false;
 
 	[Header("Settings")]
 	[SerializeField]
@@ -20,10 +21,14 @@ public class Human : MonoBehaviour {
 	[SerializeField]
 	private float speed = 1f;
 
+	[Header("References")]
+	public PlayerIndicator indicator;
+
 	// TODO [Header("Events")]
 
 	private float jumpHeldTime = 0;
 	private bool jumpWasPressed = false;
+	private bool canJump = false;
 
 	private bool alive = true;
 
@@ -44,9 +49,11 @@ public class Human : MonoBehaviour {
 		if (control.ShouldMove()) Move(control.GetMoveMagnitude());
 
 		if (control.GetJumpButton()) {
-			if (jumpHeldTime < maxJumpHeld) {
-				jumpHeldTime += Time.deltaTime;
-				Jump(jumpHeldTime);
+			if (jumpHeldTime > 0 || canJump) {
+				if (jumpHeldTime < maxJumpHeld) {
+					jumpHeldTime += Time.deltaTime;
+					Jump(jumpHeldTime);
+				}
 			}
 		} else {
 			jumpHeldTime = 0;
@@ -67,6 +74,8 @@ public class Human : MonoBehaviour {
 		float velocity = Mathf.Sqrt(-2.0f * Physics2D.gravity.y * targetHeight); 
 
 		rb.velocity = new Vector2(rb.velocity.x, (float.IsNaN(velocity) ? 0 : velocity));
+
+		canJump = false;
 	}
 
 	private bool IsJumpDown() {
@@ -82,7 +91,12 @@ public class Human : MonoBehaviour {
 	}
 
 	public bool ChangeController(IHumanController controller) {
-		return (control = controller) != null;
+		control = controller;
+		controllerConnected = control is PlayerHumanController;
+
+		indicator?.UpdateValues(controllerNum, controllerConnected);
+
+		return controllerConnected;
 	}
 
 	public void Kill() {
@@ -91,6 +105,19 @@ public class Human : MonoBehaviour {
 
 	public bool IsAlive() {
 		return alive;
+	}
+
+	private void OnCollisionEnter2D(Collision2D collision) {
+		ContactPoint2D[] contactPoints = new ContactPoint2D[collision.contactCount];
+		collision.GetContacts(contactPoints);
+
+		foreach(ContactPoint2D cp in contactPoints) {
+			Vector2 point = transform.InverseTransformPoint(cp.point);
+
+			if (point.y <= 0.16f) canJump = true;
+
+		}
+
 	}
 
 }
