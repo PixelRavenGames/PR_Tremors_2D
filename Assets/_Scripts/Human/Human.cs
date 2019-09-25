@@ -107,7 +107,7 @@ public class Human : MonoBehaviour {
 		return alive;
 	}
 
-	private void OnCollisionEnter2D(Collision2D collision) {
+	private void OnCollisionStay2D(Collision2D collision) {
 		ContactPoint2D[] contactPoints = new ContactPoint2D[collision.contactCount];
 		collision.GetContacts(contactPoints);
 
