@@ -15,8 +15,6 @@ public class Human : MonoBehaviour {
 	[SerializeField]
 	private float jumpHeight = 3;
 	[SerializeField]
-	private float maxJumpHeld = 1f;
-	[SerializeField]
 	private float fallModifier = 1f;
 	[SerializeField]
 	private float speed = 1f;
@@ -26,7 +24,6 @@ public class Human : MonoBehaviour {
 
 	// TODO [Header("Events")]
 
-	private float jumpHeldTime = 0;
 	private bool jumpWasPressed = false;
 	private bool canJump = false;
 
@@ -45,18 +42,19 @@ public class Human : MonoBehaviour {
 			rb.velocity += Vector2.up * Physics2D.gravity.y * (fallModifier - 1) * Time.deltaTime;
 		}
 
+		if (Mathf.Abs(rb.velocity.x) > 0) {
+			rb.velocity = new Vector2(rb.velocity.x * 0.7f, rb.velocity.y);
+		}
+
 		control.Update();
 		if (control.ShouldMove()) Move(control.GetMoveMagnitude());
 
 		if (control.GetJumpButton()) {
-			if (jumpHeldTime > 0 || canJump) {
-				if (jumpHeldTime < maxJumpHeld) {
-					jumpHeldTime += Time.deltaTime;
-					Jump(jumpHeldTime);
-				}
+			if (canJump) {
+				Jump();
 			}
-		} else {
-			jumpHeldTime = 0;
+		} else if (rb.velocity.y > 0) {
+			rb.velocity += Vector2.up * Physics2D.gravity.y * 3 * Time.deltaTime;
 		}
 		
 	}
@@ -65,11 +63,10 @@ public class Human : MonoBehaviour {
 		rb.velocity = new Vector2(magnitude * speed * Time.deltaTime, rb.velocity.y);
 	}
 
-	public void Jump(float magnitude) {
+	public void Jump(float magnitude = 1) {
 		if (jumpHeight <= 0) return;
 
-		float percentage = Mathf.Clamp01(magnitude / maxJumpHeld);
-		float targetHeight = (percentage * jumpHeight * 0.5f);
+		float targetHeight = jumpHeight * magnitude;
 
 		float velocity = Mathf.Sqrt(-2.0f * Physics2D.gravity.y * targetHeight); 
 
@@ -114,7 +111,7 @@ public class Human : MonoBehaviour {
 		foreach(ContactPoint2D cp in contactPoints) {
 			Vector2 point = transform.InverseTransformPoint(cp.point);
 
-			if (point.y <= 0.16f) canJump = true;
+			if (point.y <= 0.16f && point.x > 0.01f && point.x < 0.15f) canJump = true;
 
 		}
 

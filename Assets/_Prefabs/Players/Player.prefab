@@ -96,8 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controllerNum: 0
-  jumpHeight: 0.48
-  maxJumpHeld: 0.5
+  jumpHeight: 1
   fallModifier: 2.5
   speed: 100
   indicator: {fileID: 3384962681002845633}
