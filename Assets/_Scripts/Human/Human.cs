@@ -42,6 +42,10 @@ public class Human : MonoBehaviour {
 			rb.velocity += Vector2.up * Physics2D.gravity.y * (fallModifier - 1) * Time.deltaTime;
 		}
 
+		if (Mathf.Abs(rb.velocity.x) > 0) {
+			rb.velocity = new Vector2(rb.velocity.x * 0.7f, rb.velocity.y);
+		}
+
 		control.Update();
 		if (control.ShouldMove()) Move(control.GetMoveMagnitude());
 
