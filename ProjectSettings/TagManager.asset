@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -40,4 +41,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2789455017
+    locked: 0
+  - name: Buildings
+    uniqueID: 4177706165
+    locked: 0
+  - name: Ground
+    uniqueID: 2822387823
+    locked: 0
+  - name: Players
+    uniqueID: 4267072999
+    locked: 0
+  - name: Worm
+    uniqueID: 208018309
+    locked: 0
+  - name: Effects
+    uniqueID: 109522221
     locked: 0
