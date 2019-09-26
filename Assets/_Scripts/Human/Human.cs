@@ -49,8 +49,8 @@ public class Human : MonoBehaviour {
 			if (canJump) {
 				Jump();
 			}
-		} else {
-			rb.velocity = new Vector2(rb.velocity.x, Mathf.Min(rb.velocity.y, 0));
+		} else if (rb.velocity.y > 0) {
+			rb.velocity += Vector2.up * Physics2D.gravity.y * 3 * Time.deltaTime;
 		}
 		
 	}
