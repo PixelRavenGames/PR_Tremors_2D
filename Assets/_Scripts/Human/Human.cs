@@ -111,7 +111,7 @@ public class Human : MonoBehaviour {
 		foreach(ContactPoint2D cp in contactPoints) {
 			Vector2 point = transform.InverseTransformPoint(cp.point);
 
-			if (point.y <= 0.16f) canJump = true;
+			if (point.y <= 0.16f && point.x > 0.01f && point.x < 0.15f) canJump = true;
 
 		}
 
