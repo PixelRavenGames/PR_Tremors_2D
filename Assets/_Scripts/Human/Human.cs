@@ -48,8 +48,6 @@ public class Human : MonoBehaviour, IDamageable {
 			rb.velocity = new Vector2(rb.velocity.x * 0.7f, rb.velocity.y);
 		}
 
-		if (Input.GetKeyDown(KeyCode.Space)) Stun(1f);
-
 		if (stunTime <= 0f) {
 			control.Update();
 			if (control.ShouldMove()) Move(control.GetMoveMagnitude());
@@ -105,7 +103,10 @@ public class Human : MonoBehaviour, IDamageable {
 	}
 
 	public void Kill() {
+		if (!alive) return;
 		alive = false;
+
+		GetComponent<SpriteRenderer>().color = new Color(0.5f, 0.75f, 1f, 0.5f);
 	}
 
 	public void Stun(float time) {
@@ -135,7 +136,7 @@ public class Human : MonoBehaviour, IDamageable {
 		float damage = 1 - Mathf.Pow(distance / damageMultiplier, 2);
 
 		if (damage > 0.75f) Kill();
-		else Stun(damage);
+		else Stun(damage * 10f);
 
 	}
 }
