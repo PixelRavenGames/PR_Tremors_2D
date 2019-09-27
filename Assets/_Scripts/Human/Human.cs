@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class Human : MonoBehaviour {
+public class Human : MonoBehaviour, IDamageable {
 
 	[Header("Controller")]
 	public int controllerNum = 0;
@@ -29,6 +29,8 @@ public class Human : MonoBehaviour {
 
 	private bool alive = true;
 
+	private float stunTime = 0;
+
 	private Rigidbody2D rb;
 
 	void Start() {
@@ -46,15 +48,21 @@ public class Human : MonoBehaviour {
 			rb.velocity = new Vector2(rb.velocity.x * 0.7f, rb.velocity.y);
 		}
 
-		control.Update();
-		if (control.ShouldMove()) Move(control.GetMoveMagnitude());
+		if (Input.GetKeyDown(KeyCode.Space)) Stun(1f);
 
-		if (control.GetJumpButton()) {
-			if (canJump) {
-				Jump();
+		if (stunTime <= 0f) {
+			control.Update();
+			if (control.ShouldMove()) Move(control.GetMoveMagnitude());
+
+			if (control.GetJumpButton()) {
+				if (canJump) {
+					Jump();
+				}
+			} else if (rb.velocity.y > 0) {
+				rb.velocity += Vector2.up * Physics2D.gravity.y * 3 * Time.deltaTime;
 			}
-		} else if (rb.velocity.y > 0) {
-			rb.velocity += Vector2.up * Physics2D.gravity.y * 3 * Time.deltaTime;
+		} else {
+			stunTime -= Time.deltaTime;
 		}
 		
 	}
@@ -100,6 +108,10 @@ public class Human : MonoBehaviour {
 		alive = false;
 	}
 
+	public void Stun(float time) {
+		stunTime += time * Random.Range(0.9f, 1.1f);
+	}
+
 	public bool IsAlive() {
 		return alive;
 	}
@@ -117,4 +129,13 @@ public class Human : MonoBehaviour {
 
 	}
 
+	public void Damage(Vector2 damageSource, float damageMultiplier = 1) {
+		float distance = Vector2.Distance(transform.position, damageSource);
+
+		float damage = 1 - Mathf.Pow(distance / damageMultiplier, 2);
+
+		if (damage > 0.75f) Kill();
+		else Stun(damage);
+
+	}
 }
