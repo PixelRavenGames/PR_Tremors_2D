@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09fc0a68906ac54594b996f80f49224, type: 3}
   m_Name: Bot Settings
   m_EditorClassIdentifier: 
-  wanderUpdateDelay: 3
-  minimumIdleDistance: 5
+  minimumIdleDistance: 2
   idleEndChance: 30
-  wanderEndChance: 30
+  wanderUpdateDelay: 3
+  wanderEndChance: 1
   wanderJumpMinimumSpeed: 0.7
   wanderContinueJumpChance: 90
   runDistance: 1
-  runDistanceToJump: 0.25
+  runDistanceToJump: 2
   runJumpChance: 60
   movementDeadzone: 0

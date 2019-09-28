@@ -57,8 +57,8 @@ public class PlayerManager : MonoBehaviour {
 		return ret;
 	}
 
-	public Vector2 GetWormPosition() {
-		return Vector2.zero;
+	public Vector2[] GetMeteorPositions() {
+		return new Vector2[0];
 	}
 
 	public Vector2[] GetPlayerPositions() {
@@ -66,7 +66,7 @@ public class PlayerManager : MonoBehaviour {
 
 		// TODO ret.Add(WORM);
 		for (int i = 0; i < humans.Length; i++) {
-			if (humans[i].IsAlive()) ret.Add(humans[i].transform.position);
+			ret.Add(humans[i].transform.position);
 		}
 
 		return ret.ToArray();

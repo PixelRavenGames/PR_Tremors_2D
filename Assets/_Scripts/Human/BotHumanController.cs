@@ -43,18 +43,18 @@ public class BotHumanController : IHumanController {
 			case BotControllerState.IDLE:
 				targetMoveMagnitude = 0;
 
-				if (GetDistanceFromWorm() < settings.minimumIdleDistance || Random.Range(0, 100f) <= settings.idleEndChance) { state = BotControllerState.WANDER; }
+				if (GetDistanceFromMeteor() < settings.minimumIdleDistance || Random.Range(0, 100f) <= settings.idleEndChance) { state = BotControllerState.WANDER; }
 
 				break;
 			case BotControllerState.WANDER:
 				needMovemnentUpdate -= Time.deltaTime;
 				if (needMovemnentUpdate <= 0) {
-					targetMoveMagnitude = Random.Range(0, 1) == 0 ? -1 : 1;
+					targetMoveMagnitude = Random.Range(0, 2) == 0 ? -1 : 1;
 					needMovemnentUpdate += settings.wanderUpdateDelay;
 				}
 
-				if (GetDistanceFromWorm() > settings.minimumIdleDistance && Random.Range(0, 100f) <= settings.wanderEndChance) { state = BotControllerState.IDLE; }
-				if (GetDistanceFromWorm() < settings.runDistance) { state = BotControllerState.RUN; }
+				if (GetDistanceFromMeteor() > settings.minimumIdleDistance && Random.Range(0, 100f) <= settings.wanderEndChance) { state = BotControllerState.IDLE; }
+				if (GetDistanceFromMeteor() < settings.runDistance) { state = BotControllerState.RUN; }
 
 				if (moveMagnitude > settings.wanderJumpMinimumSpeed) {
 					if (!needJump) needJump = Random.Range(0, 100) == 0;
@@ -65,12 +65,12 @@ public class BotHumanController : IHumanController {
 
 				break;
 			case BotControllerState.RUN:
-				targetMoveMagnitude = 1 - Mathf.Clamp01(GetDistanceFromWorm());
-				targetMoveMagnitude = Mathf.Sign(GetDirectionToWorm().x);
+				targetMoveMagnitude = 1 - Mathf.Clamp01(GetDistanceFromMeteor());
+				targetMoveMagnitude = Mathf.Sign(GetDirectionToMeteor().x);
 
-				needJump = Mathf.Abs(GetDirectionToWorm().y) > settings.runDistanceToJump && Random.Range(0, 100f) <= settings.runJumpChance;
+				needJump = Mathf.Abs(GetDirectionToMeteor().y) > settings.runDistanceToJump && Random.Range(0, 100f) <= settings.runJumpChance;
 
-				if (GetDistanceFromWorm() > settings.runDistance) { state = BotControllerState.WANDER; }
+				if (GetDistanceFromMeteor() > settings.runDistance) { state = BotControllerState.WANDER; }
 
 				break;
 		}
@@ -79,12 +79,30 @@ public class BotHumanController : IHumanController {
 		needMove = moveMagnitude != 0;
 	}
 
-	private float GetDistanceFromWorm() {
-		return Vector2.Distance(human.transform.position, PlayerManager.instance.GetWormPosition());
+	private float GetDistanceFromMeteor() {
+		Vector2 closest = Vector2.zero;
+		float closestDistance = float.MaxValue;
+		foreach (Vector2 pos in PlayerManager.instance.GetMeteorPositions()) {
+			float newDist = Vector2.Distance(pos, human.transform.position);
+			if (newDist < closestDistance) {
+				closest = pos;
+			}
+		}
+
+		return closestDistance;
 	}
 
-	private Vector2 GetDirectionToWorm() {
-		return (Vector2)human.transform.position - PlayerManager.instance.GetWormPosition();
+	private Vector2 GetDirectionToMeteor() {
+		Vector2 closest = Vector2.zero;
+		float closestDistance = float.MaxValue;
+		foreach (Vector2 pos in PlayerManager.instance.GetMeteorPositions()) {
+			float newDist = Vector2.Distance(pos, human.transform.position);
+			if (newDist < closestDistance) {
+				closest = pos;
+			}
+		}
+
+		return (Vector2)human.transform.position - closest;
 	}
 
 }

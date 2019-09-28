@@ -45,6 +45,8 @@ public class Human : MonoBehaviour, IDamageable {
 
 		canWallJump = (attachedToWall == WallSide.LEFT) || (attachedToWall == WallSide.RIGHT);
 
+		if (Input.GetKeyDown(KeyCode.Space)) Kill();
+
 		if (rb.velocity.y < 0) {
 			rb.velocity += Vector2.up * Physics2D.gravity.y * (fallModifier - 1) * Time.deltaTime;
 		}
@@ -103,8 +105,6 @@ public class Human : MonoBehaviour, IDamageable {
 			float cos = Mathf.Cos(rad);
 			float sin = Mathf.Sin(rad);
 			jumpVector = new Vector2((jumpVector.x * cos) - (jumpVector.y * sin), (jumpVector.y * cos) - (jumpVector.x * sin));
-
-			Debug.Log(jumpVector);
 		}
 
 		rb.velocity = new Vector2(rb.velocity.x + jumpVector.x, jumpVector.y);
@@ -139,11 +139,14 @@ public class Human : MonoBehaviour, IDamageable {
 		if (!alive) return;
 		alive = false;
 
+		Stun(2, 0);
+		transform.position += (Vector3)Vector2.up * 10f;
+
 		GetComponent<SpriteRenderer>().color = new Color(0.5f, 0.75f, 1f, 0.5f);
 	}
 
-	public void Stun(float time) {
-		stunTime += time * Random.Range(0.9f, 1.1f);
+	public void Stun(float time, float random = 0.1f) {
+		stunTime += time * Random.Range(1 - random, 1 + random);
 	}
 
 	public bool IsAlive() {
