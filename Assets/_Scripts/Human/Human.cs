@@ -26,10 +26,13 @@ public class Human : MonoBehaviour, IDamageable {
 
 	private bool jumpWasPressed = false;
 	private bool canJump = false;
+	private bool canWallJump = false;
 
 	private bool alive = true;
 
 	private float stunTime = 0;
+	private enum WallSide { NONE, LEFT, RIGHT }
+	private WallSide attachedToWall = WallSide.NONE;
 
 	private Rigidbody2D rb;
 
@@ -39,6 +42,8 @@ public class Human : MonoBehaviour, IDamageable {
 
 	void Update() {
 		if (control == null) return;
+
+		canWallJump = (attachedToWall == WallSide.LEFT) || (attachedToWall == WallSide.RIGHT);
 
 		if (rb.velocity.y < 0) {
 			rb.velocity += Vector2.up * Physics2D.gravity.y * (fallModifier - 1) * Time.deltaTime;
@@ -52,9 +57,14 @@ public class Human : MonoBehaviour, IDamageable {
 			control.Update();
 			if (control.ShouldMove()) Move(control.GetMoveMagnitude());
 
+			bool isJumpDown = IsJumpDown();
 			if (control.GetJumpButton()) {
-				if (canJump) {
-					Jump();
+				if (isJumpDown) {
+					if (canWallJump) {
+						Jump(3, attachedToWall == WallSide.LEFT ? -45 : 45);
+					} else if (canJump) {
+						Jump();
+					}
 				}
 			} else if (rb.velocity.y > 0) {
 				rb.velocity += Vector2.up * Physics2D.gravity.y * 3 * Time.deltaTime;
@@ -62,23 +72,46 @@ public class Human : MonoBehaviour, IDamageable {
 		} else {
 			stunTime -= Time.deltaTime;
 		}
+
+		attachedToWall = WallSide.NONE;
 		
 	}
 
 	public void Move(float magnitude) {
-		rb.velocity = new Vector2(magnitude * speed * Time.deltaTime, rb.velocity.y);
+		float previousX = rb.velocity.x;
+
+		Vector2 newVelocity = new Vector2(magnitude * speed * Time.deltaTime, rb.velocity.y);
+
+		if (Mathf.Sign(newVelocity.x) != Mathf.Sign(previousX)) {
+			newVelocity = new Vector2(previousX + (newVelocity.x * 0.01f), newVelocity.y);
+		}
+
+		rb.velocity = newVelocity;
 	}
 
-	public void Jump(float magnitude = 1) {
+	public void Jump(float magnitude = 1, float angle = 0) {
 		if (jumpHeight <= 0) return;
 
 		float targetHeight = jumpHeight * magnitude;
 
-		float velocity = Mathf.Sqrt(-2.0f * Physics2D.gravity.y * targetHeight); 
+		float velocity = Mathf.Sqrt(-2.0f * Physics2D.gravity.y * targetHeight);
 
-		rb.velocity = new Vector2(rb.velocity.x, (float.IsNaN(velocity) ? 0 : velocity));
+		Vector2 jumpVector = Vector2.up * (float.IsNaN(velocity) ? 0 : velocity);
+
+		if (angle != 0) {
+			float rad = angle * Mathf.Deg2Rad;
+			float cos = Mathf.Cos(rad);
+			float sin = Mathf.Sin(rad);
+			jumpVector = new Vector2((jumpVector.x * cos) - (jumpVector.y * sin), (jumpVector.y * cos) - (jumpVector.x * sin));
+
+			Debug.Log(jumpVector);
+		}
+
+		rb.velocity = new Vector2(rb.velocity.x + jumpVector.x, jumpVector.y);
 
 		canJump = false;
+		attachedToWall = WallSide.NONE;
+		canWallJump = false;
 	}
 
 	private bool IsJumpDown() {
@@ -124,10 +157,19 @@ public class Human : MonoBehaviour, IDamageable {
 		foreach(ContactPoint2D cp in contactPoints) {
 			Vector2 point = transform.InverseTransformPoint(cp.point);
 
-			if (point.y <= 0.16f && point.x > 0.01f && point.x < 0.15f) canJump = true;
+			if (point.y <= -0.10f) {
+				canJump = true;
+			} else {
+				if (point.x < -0.07f) { attachedToWall = WallSide.LEFT; }
+				if (point.x > 0.07f) { attachedToWall = WallSide.RIGHT; }
+			}
 
 		}
 
+	}
+
+	private void OnCollisionExit2D(Collision2D collision) {
+		attachedToWall = WallSide.NONE;
 	}
 
 	public void Damage(Vector2 damageSource, float damageMultiplier = 1) {
