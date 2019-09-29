@@ -371,8 +371,8 @@ MonoBehaviour:
   differentMargins: 0
   screenMargin: 0.2
   screenMargins:
-    up: 0
-    down: 0
+    up: 0.1
+    down: 0.1
     left: 0
     right: 0
 --- !u!1001 &275594061
