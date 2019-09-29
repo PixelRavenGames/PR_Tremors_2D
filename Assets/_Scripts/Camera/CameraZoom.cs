@@ -73,11 +73,11 @@ public class CameraZoom : MonoBehaviour {
 
 		Camera cam = GetComponent<Camera>();
 
-		Vector2 outPointTL = cam.ViewportToWorldPoint(new Vector2(differentMargins ? screenMargins.left : screenMargin, differentMargins ? screenMargins.up : screenMargin));
-		Vector2 outPointBR = cam.ViewportToWorldPoint(new Vector2(1 - (differentMargins ? screenMargins.right : screenMargin), 1 - (differentMargins ? screenMargins.down : screenMargin)));
+		Vector2 outPointTL = cam.ViewportToWorldPoint(new Vector2(differentMargins ? screenMargins.left : screenMargin, 1 - (differentMargins ? screenMargins.up : screenMargin)));
+		Vector2 outPointBR = cam.ViewportToWorldPoint(new Vector2(1 - (differentMargins ? screenMargins.right : screenMargin), differentMargins ? screenMargins.down : screenMargin));
 
-		Vector2 inPointTL = cam.ViewportToWorldPoint(new Vector2(2 * (differentMargins ? screenMargins.left : screenMargin), 2 * (differentMargins ? screenMargins.up : screenMargin)));
-		Vector2 inPointBR = cam.ViewportToWorldPoint(new Vector2(1 - (2 * (differentMargins ? screenMargins.right : screenMargin)), 1 - (2 * (differentMargins ? screenMargins.down : screenMargin))));
+		Vector2 inPointTL = cam.ViewportToWorldPoint(new Vector2(2 * (differentMargins ? screenMargins.left : screenMargin), 1 - (2 * (differentMargins ? screenMargins.up : screenMargin))));
+		Vector2 inPointBR = cam.ViewportToWorldPoint(new Vector2(1 - (2 * (differentMargins ? screenMargins.right : screenMargin)), 2 * (differentMargins ? screenMargins.down : screenMargin)));
 
 		Gizmos.DrawLine(outPointTL, new Vector2(outPointTL.x, outPointBR.y));
 		Gizmos.DrawLine(new Vector2(outPointTL.x, outPointBR.y), outPointBR);
