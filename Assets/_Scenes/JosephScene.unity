@@ -127,12 +127,12 @@ PrefabInstance:
     - target: {fileID: 8217749804914809568, guid: c6a95d9f20b25884e95b4ed808b4b70b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2.593
       objectReference: {fileID: 0}
     - target: {fileID: 8217749804914809568, guid: c6a95d9f20b25884e95b4ed808b4b70b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.484
       objectReference: {fileID: 0}
     - target: {fileID: 8217749804914809568, guid: c6a95d9f20b25884e95b4ed808b4b70b,
         type: 3}
@@ -687,6 +687,86 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63c037f9667992244a321cc678ecde67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1185483699
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1185483701}
+  - component: {fileID: 1185483700}
+  m_Layer: 0
+  m_Name: Meteor Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1185483700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185483699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2362d66407e4cc84781ae19186fa3311, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meteors: []
+  meteorPrefab: {fileID: 4243650528370007925, guid: 90bca752dac36fc448866f1836b67dbd,
+    type: 3}
+  meteorRate:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 3.4309015
+      outSlope: 3.4309015
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5
+      value: 1.7154508
+      inSlope: 9.98764
+      outSlope: 9.98764
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 9.98764
+      inSlope: 16.54438
+      outSlope: 16.54438
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  maxMeteorTime: 120
+--- !u!4 &1185483701
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185483699}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.08720945, y: -0.72117466, z: -0.001953125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1339373162
 PrefabInstance:
   m_ObjectHideFlags: 0

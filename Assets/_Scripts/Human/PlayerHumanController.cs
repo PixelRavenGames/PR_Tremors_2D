@@ -9,6 +9,7 @@ public class PlayerHumanController : IHumanController {
 
 	private Vector2 movement = Vector2.zero;
 	private bool jumpButton = false;
+	private bool dashButton = false;
 
 	public PlayerHumanController(int controllerNum, Human human) {
 		this.controllerNum = controllerNum;
@@ -17,6 +18,10 @@ public class PlayerHumanController : IHumanController {
 
 	public bool GetCrouchButton() {
 		return movement.y > 0;
+	}
+
+	public bool GetDashButton() {
+		return dashButton;
 	}
 
 	public bool GetJumpButton() {
@@ -34,5 +39,6 @@ public class PlayerHumanController : IHumanController {
 	public void Update() {
 		movement = new Vector2(Input.GetAxis($"Joystick{controllerNum}X"), Input.GetAxis($"Joystick{controllerNum}Y"));
 		jumpButton = Input.GetAxis($"Joystick{controllerNum}button0") != 0;
+		dashButton = Input.GetAxis($"Joystick{controllerNum}button1") != 0;
 	}
 }

@@ -18,6 +18,10 @@ public class Human : MonoBehaviour, IDamageable {
 	private float fallModifier = 1f;
 	[SerializeField]
 	private float speed = 1f;
+	[SerializeField]
+	private float dashSpeed = 1f;
+	[SerializeField]
+	private float dashCooldown = 0.5f;
 
 	[Header("References")]
 	public PlayerIndicator indicator;
@@ -34,6 +38,8 @@ public class Human : MonoBehaviour, IDamageable {
 	private bool canJump = false;
 	private bool canWallJump = false;
 
+	private bool dashWasPressed = false;
+
 	private bool isCrouching = false;
 
 	private bool alive = true;
@@ -44,12 +50,18 @@ public class Human : MonoBehaviour, IDamageable {
 
 	private Rigidbody2D rb;
 	private SpriteRenderer sr;
+	private TrailRenderer tr;
+
+	private float dashTimer = 0;
 
 	void Start() {
 		rb = GetComponent<Rigidbody2D>();
 		sr = GetComponent<SpriteRenderer>();
+		tr = GetComponent<TrailRenderer>();
 
 		sr.sprite = defaultSprite;
+
+		tr.emitting = false;
 	}
 
 	void Update() {
@@ -91,9 +103,18 @@ public class Human : MonoBehaviour, IDamageable {
 			if (!wasCrouching && isCrouching) sr.sprite = crouchSprite;
 			if (wasCrouching && !isCrouching) sr.sprite = defaultSprite;
 
+			bool dashButton = control.GetDashButton();
+			if (!dashWasPressed && dashButton) Dash();
+			dashWasPressed = dashButton;
+
+			dashTimer -= Time.deltaTime;
+
 		} else {
 			stunTime -= Time.deltaTime;
+			dashTimer = 0;
 		}
+
+		if (dashTimer <= dashCooldown - 0.2f) tr.emitting = false;
 
 		attachedToWall = WallSide.NONE;
 		sr.flipX = rb.velocity.x < 0;
@@ -103,10 +124,12 @@ public class Human : MonoBehaviour, IDamageable {
 	public void Move(float magnitude) {
 		float previousX = rb.velocity.x;
 
-		Vector2 newVelocity = new Vector2(magnitude * speed * Time.deltaTime, rb.velocity.y);
+		Vector2 newVelocity = new Vector2(magnitude * speed, rb.velocity.y);
 
 		if (Mathf.Sign(newVelocity.x) != Mathf.Sign(previousX)) {
 			newVelocity = new Vector2(previousX + (newVelocity.x * 0.01f), newVelocity.y);
+		} else {
+			newVelocity = new Vector2(Mathf.Max(Mathf.Abs(previousX), Mathf.Abs(newVelocity.x)) * Mathf.Sign(newVelocity.x), newVelocity.y);
 		}
 
 		rb.velocity = newVelocity;
@@ -133,6 +156,15 @@ public class Human : MonoBehaviour, IDamageable {
 		canJump = false;
 		attachedToWall = WallSide.NONE;
 		canWallJump = false;
+	}
+
+	public void Dash() {
+		if (dashTimer > 0) return;
+
+		rb.velocity += Vector2.right * control.GetMoveMagnitude() * dashSpeed;
+		tr.emitting = true;
+
+		dashTimer = dashCooldown;
 	}
 
 	private bool IsJumpDown() {
