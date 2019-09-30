@@ -19,6 +19,7 @@
           </e>
           <e p="Environment" t="Include">
             <e p="Cuttable.cs" t="Include" />
+            <e p="ShowInside.cs" t="Include" />
           </e>
           <e p="Human" t="Include">
             <e p="BotHumanController.cs" t="Include" />
@@ -31,8 +32,10 @@
             <e p="IDamageable.cs" t="Include" />
           </e>
           <e p="Meteor" t="Include">
+            <e p="Explosion.cs" t="Include" />
             <e p="Meteor.cs" t="Include" />
           </e>
+          <e p="MeteorManager.cs" t="Include" />
           <e p="PlayerManager.cs" t="Include" />
           <e p="Triangulator.cs" t="Include" />
           <e p="UI" t="Include">
@@ -53,8 +56,6 @@
         <e p="Editor" t="Include">
           <e p="ConditionalHidePropertyDrawer.cs" t="Include" />
         </e>
-        <e p="Explosion.cs" t="Include" />
-        <e p="MeteorManager.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="GitHub" t="Include">
             <e p="Editor" t="Include">

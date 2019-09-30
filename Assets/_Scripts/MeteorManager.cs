@@ -22,7 +22,6 @@ public class MeteorManager : MonoBehaviour
         //print(Time.deltaTime * meteorRate.Evaluate(timePassed / maxMeteorTime));
         if (Random.Range(0f, 1f) < Time.deltaTime * meteorRate.Evaluate(timePassed / maxMeteorTime))
         {
-            print("meteor");
             var meteor = Instantiate(meteorPrefab);
             meteor.transform.position = new Vector3(Random.Range(-2f, 2f), 3, 0);
             meteor.meteorVelocity = new Vector2(Random.Range(-1.5f, 1.5f), Random.Range(-5.5f, -6.5f));
