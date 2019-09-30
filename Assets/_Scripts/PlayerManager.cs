@@ -19,6 +19,7 @@ public class PlayerManager : MonoBehaviour {
 		if (instance == null) {
 			instance = this;
 			Physics2D.IgnoreLayerCollision(8, 8);
+			Physics2D.IgnoreLayerCollision(8, 9);
 
 			meteorManager = FindObjectOfType<MeteorManager>();
 		}
