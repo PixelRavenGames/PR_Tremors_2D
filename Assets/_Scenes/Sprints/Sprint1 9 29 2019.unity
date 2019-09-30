@@ -2066,7 +2066,7 @@ MonoBehaviour:
   maxZoom: 5
   smoothFactor: 1
   differentMargins: 0
-  screenMargin: 0.2
+  screenMargin: 0.1
   screenMargins:
     up: 0
     down: 0
