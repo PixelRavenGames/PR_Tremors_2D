@@ -21,6 +21,7 @@ public class Human : MonoBehaviour, IDamageable {
 
 	[Header("References")]
 	public PlayerIndicator indicator;
+	public StunIndicator stunIndicator;
 
 	[Header("Sprites")]
 	public Sprite defaultSprite;
@@ -65,6 +66,7 @@ public class Human : MonoBehaviour, IDamageable {
 			rb.velocity = new Vector2(rb.velocity.x * 0.7f, rb.velocity.y);
 		}
 
+		stunIndicator.shouldShow = stunTime > 0f;
 		if (stunTime <= 0f) {
 			control.Update();
 			if (control.ShouldMove()) Move(control.GetMoveMagnitude());
