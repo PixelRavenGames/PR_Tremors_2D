@@ -23,7 +23,7 @@ public class CloudMovement : MonoBehaviour {
 		endPos = new Vector2(-transform.position.x, transform.position.y);
 
 		speed = Random.Range(minSpeed, maxSpeed);
-		if (randomizeStart) timer = Random.Range(0, 1);
+		if (randomizeStart) timer = Random.Range(0f, 1f);
 	}
 
 	void Update() {
