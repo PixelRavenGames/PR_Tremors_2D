@@ -83,7 +83,7 @@ public class Human : MonoBehaviour, IDamageable {
 			}
 
 			bool wasCrouching = isCrouching;
-			isCrouching = control.GetCrouchButton();
+			isCrouching = !control.ShouldMove() && control.GetCrouchButton();
 
 			if (!wasCrouching && isCrouching) sr.sprite = crouchSprite;
 			if (wasCrouching && !isCrouching) sr.sprite = defaultSprite;
