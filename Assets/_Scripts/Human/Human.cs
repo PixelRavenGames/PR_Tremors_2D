@@ -22,6 +22,7 @@ public class Human : MonoBehaviour, IDamageable {
 	[Header("References")]
 	public PlayerIndicator indicator;
 	public StunIndicator stunIndicator;
+	public GameObject deathEffect;
 
 	[Header("Sprites")]
 	public Sprite defaultSprite;
@@ -158,6 +159,8 @@ public class Human : MonoBehaviour, IDamageable {
 	public void Kill() {
 		if (!alive) return;
 		alive = false;
+
+		Destroy(Instantiate(deathEffect, transform.position, Quaternion.identity), 5);
 
 		Stun(2, 0);
 		transform.position += (Vector3)Vector2.up * 10f;

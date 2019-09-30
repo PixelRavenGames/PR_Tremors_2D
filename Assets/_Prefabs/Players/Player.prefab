@@ -102,6 +102,8 @@ MonoBehaviour:
   speed: 100
   indicator: {fileID: 3384962681002845633}
   stunIndicator: {fileID: 5464119763650454104}
+  deathEffect: {fileID: 4405086832756664867, guid: ce14bcee0c86f2648b36ec0d573183f2,
+    type: 3}
   defaultSprite: {fileID: 0}
   crouchSprite: {fileID: 0}
 --- !u!50 &8217749804914809583
