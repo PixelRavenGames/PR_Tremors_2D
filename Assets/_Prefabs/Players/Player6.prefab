@@ -12,6 +12,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player6
       objectReference: {fileID: 0}
+    - target: {fileID: 8217749804914809582, guid: c6a95d9f20b25884e95b4ed808b4b70b,
+        type: 3}
+      propertyPath: controllerNum
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8217749804914809582, guid: c6a95d9f20b25884e95b4ed808b4b70b,
+        type: 3}
+      propertyPath: defaultSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a4a1575ef2ffdc8418bd60dac37c2895,
+        type: 3}
+    - target: {fileID: 8217749804914809582, guid: c6a95d9f20b25884e95b4ed808b4b70b,
+        type: 3}
+      propertyPath: crouchSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e9c65dc6947756846989b771c542687c,
+        type: 3}
+    - target: {fileID: 8217749804914809569, guid: c6a95d9f20b25884e95b4ed808b4b70b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a4a1575ef2ffdc8418bd60dac37c2895,
+        type: 3}
     - target: {fileID: 8217749804914809568, guid: c6a95d9f20b25884e95b4ed808b4b70b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -66,17 +89,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8217749804914809569, guid: c6a95d9f20b25884e95b4ed808b4b70b,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: a4a1575ef2ffdc8418bd60dac37c2895,
-        type: 3}
-    - target: {fileID: 8217749804914809582, guid: c6a95d9f20b25884e95b4ed808b4b70b,
-        type: 3}
-      propertyPath: controllerNum
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6a95d9f20b25884e95b4ed808b4b70b, type: 3}

@@ -31,4 +31,6 @@ public class BotSettings : ScriptableObject {
 	[Header("Movement")]
 	[Tooltip("The minimum movement needed to move")]
 	public float movementDeadzone = 0f;
+	[Tooltip("The chance a bot will crouch")]
+	public float crouchChance = 40f;
 }
