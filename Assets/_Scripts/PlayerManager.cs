@@ -13,6 +13,8 @@ public class PlayerManager : MonoBehaviour {
 
 	private string[] previousJoysticks = null;
 
+	private MeteorManager meteorManager;
+
 	private void Awake() {
 		if (instance == null) {
 			instance = this;
@@ -58,7 +60,16 @@ public class PlayerManager : MonoBehaviour {
 	}
 
 	public Vector2[] GetMeteorPositions() {
-		return new Vector2[0];
+
+		List<GameObject> meteors = meteorManager.meteors;
+
+		Vector2[] positions = new Vector2[meteors.Count];
+
+		for (int i = 0; i < meteors.Count; i++) {
+			positions[i] = meteors[i].transform.position;
+		}
+
+		return positions;
 	}
 
 	public Vector2[] GetPlayerPositions() {
