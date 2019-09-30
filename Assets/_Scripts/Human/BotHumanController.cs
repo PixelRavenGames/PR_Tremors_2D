@@ -105,4 +105,7 @@ public class BotHumanController : IHumanController {
 		return (Vector2)human.transform.position - closest;
 	}
 
+	public bool GetCrouchButton() {
+		return !needJump && !needMove && Random.Range(0, 4) == 0;
+	}
 }

@@ -15,6 +15,10 @@ public class PlayerHumanController : IHumanController {
 		this.human = human;
 	}
 
+	public bool GetCrouchButton() {
+		return movement.y < 0;
+	}
+
 	public bool GetJumpButton() {
 		return jumpButton;
 	}

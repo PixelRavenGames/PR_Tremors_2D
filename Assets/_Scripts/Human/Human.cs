@@ -22,11 +22,17 @@ public class Human : MonoBehaviour, IDamageable {
 	[Header("References")]
 	public PlayerIndicator indicator;
 
+	[Header("Sprites")]
+	public Sprite defaultSprite;
+	public Sprite crouchSprite;
+
 	// TODO [Header("Events")]
 
 	private bool jumpWasPressed = false;
 	private bool canJump = false;
 	private bool canWallJump = false;
+
+	private bool isCrouching = false;
 
 	private bool alive = true;
 
@@ -40,6 +46,8 @@ public class Human : MonoBehaviour, IDamageable {
 	void Start() {
 		rb = GetComponent<Rigidbody2D>();
 		sr = GetComponent<SpriteRenderer>();
+
+		sr.sprite = defaultSprite;
 	}
 
 	void Update() {
@@ -73,6 +81,13 @@ public class Human : MonoBehaviour, IDamageable {
 			} else if (rb.velocity.y > 0) {
 				rb.velocity += Vector2.up * Physics2D.gravity.y * 3 * Time.deltaTime;
 			}
+
+			bool wasCrouching = isCrouching;
+			isCrouching = control.GetCrouchButton();
+
+			if (!wasCrouching && isCrouching) sr.sprite = crouchSprite;
+			if (wasCrouching && !isCrouching) sr.sprite = defaultSprite;
+
 		} else {
 			stunTime -= Time.deltaTime;
 		}

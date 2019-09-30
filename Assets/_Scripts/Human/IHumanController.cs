@@ -7,6 +7,7 @@ public interface IHumanController {
 	bool ShouldMove();
 	float GetMoveMagnitude();
 	bool GetJumpButton();
+	bool GetCrouchButton();
 	void Update();
 
 }
