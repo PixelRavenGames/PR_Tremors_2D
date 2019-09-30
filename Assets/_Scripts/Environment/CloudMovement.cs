@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CloudMovement : MonoBehaviour {
 
+	public bool randomizeStart = true;
 	public bool randomizeSpeed = false;
 	[ConditionalHide("randomizeSpeed", true, true)]
 	public float speed = 1f;
@@ -22,6 +23,7 @@ public class CloudMovement : MonoBehaviour {
 		endPos = new Vector2(-transform.position.x, transform.position.y);
 
 		speed = Random.Range(minSpeed, maxSpeed);
+		if (randomizeStart) timer = Random.Range(0, 1);
 	}
 
 	void Update() {
