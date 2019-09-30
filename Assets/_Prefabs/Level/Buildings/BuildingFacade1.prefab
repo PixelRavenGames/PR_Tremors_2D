@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 991585286582230721}
   - component: {fileID: 991585286582230720}
   - component: {fileID: 991585286582230722}
-  - component: {fileID: 991585286582230723}
+  - component: {fileID: 5265139288750682039}
+  - component: {fileID: 793648862728876717}
   m_Layer: 0
   m_Name: BuildingFacade1
   m_TagString: Untagged
@@ -50,7 +51,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c4ca1ac82a3a9594b82425b0cc7599be, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -70,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 3105848160dc64545bee3ce05d005bd0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8a6ccf770e8c2fb45a87251cffc79af1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,8 +97,8 @@ MonoBehaviour:
   transitionTime: 0.1
   transparency: 0.9
   arePlayersInside: 0
---- !u!61 &991585286582230723
-BoxCollider2D:
+--- !u!60 &5265139288750682039
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -106,7 +107,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -119,6 +120,22 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.5}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.5, y: 0.75}
+      - {x: -0.5, y: -0.75}
+      - {x: 0.5, y: -0.75}
+      - {x: 0.5, y: 0.75}
+--- !u!114 &793648862728876717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991585286582230751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc0be71a35395364687cd115892a08bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  polygonCollider: {fileID: 0}
