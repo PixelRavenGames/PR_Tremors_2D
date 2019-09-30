@@ -38,9 +38,17 @@ public class Cuttable : MonoBehaviour
     private void InitializeMask()
     {
         lastClippingZ += 0.1f;
-        
-        var sprite = GetComponent<SpriteRenderer>().sprite;
-        var rt = new RenderTexture(sprite.texture.width, sprite.texture.height, 16, RenderTextureFormat.ARGB32);
+
+        var sr = GetComponent<SpriteRenderer>();
+        var sprite = sr.sprite;
+        var width = sprite.texture.width;
+        var height = sprite.texture.height;
+        if (sr.drawMode == SpriteDrawMode.Tiled)
+        {
+            width = (int) (width * sr.size.x);
+            height = (int) (height * sr.size.y);
+        }
+        var rt = new RenderTexture(width, height, 16, RenderTextureFormat.ARGB32);
         rt.Create();
         
         var newcamera = new GameObject("Culling Camera");

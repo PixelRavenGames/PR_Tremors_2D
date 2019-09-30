@@ -9,12 +9,12 @@ using Path = System.Collections.Generic.List<ClipperLib.IntPoint>;
 using Paths = System.Collections.Generic.List<System.Collections.Generic.List<ClipperLib.IntPoint>>;
 using Random = System.Random;
 
-public class WormEat : MonoBehaviour
+public class Cutter : MonoBehaviour
 {
     public float CutResolution = 1000f;
     public float CutRadius = 0.5f;
     
-    private void Update()
+    public void Cut()
     {
         var colliders = Physics2D.OverlapCircleAll(new Vector2(transform.position.x, transform.position.y), CutRadius);
         

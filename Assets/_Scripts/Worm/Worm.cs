@@ -17,7 +17,7 @@ public class Worm : MonoBehaviour
 
     [Header("Prefabs")]
     [SerializeField] private GameObject head;
-    private WormEat wormEater;
+    private Cutter wormEater;
     [SerializeField] private GameObject segment;
     private List<GameObject> segments = new List<GameObject>();
     [SerializeField] private GameObject tail;
@@ -28,7 +28,7 @@ public class Worm : MonoBehaviour
         // temp
         control = new PlayerWormController(controllerNum);
 
-        wormEater = head.GetComponent<WormEat>();
+        wormEater = head.GetComponent<Cutter>();
         
         segments.Add(segment);
         for(var i = 1; i < numSegments; i++)

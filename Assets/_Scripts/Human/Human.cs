@@ -184,4 +184,9 @@ public class Human : MonoBehaviour, IDamageable {
 		else Stun(damage * 10f);
 
 	}
+
+	public void Damage(float rawDamage) {
+		if (rawDamage > 0.75f) Kill();
+		else Stun(rawDamage * 10f);
+	}
 }
