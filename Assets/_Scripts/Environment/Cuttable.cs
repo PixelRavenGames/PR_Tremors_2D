@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using ClipperLib;
-using UnityEditor.U2D;
-using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.Rendering;
 

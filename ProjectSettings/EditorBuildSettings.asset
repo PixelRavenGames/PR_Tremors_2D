@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Scenes/Sprints/Sprint1 9 29 2019.unity
+    guid: d452fd8b00ad018498722fe783c20e19
   m_configObjects: {}
