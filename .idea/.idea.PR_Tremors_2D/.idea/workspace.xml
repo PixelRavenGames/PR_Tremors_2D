@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3615de77-0cc7-46cc-8384-cbe2f709a430" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Explosion.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Explosion.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MeteorManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MeteorManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/NewClippingTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/NewClippingTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/testrt.renderTexture" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/testrt.renderTexture.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PR_Tremors_2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PR_Tremors_2D/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/CuttableSprite.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/CuttableSprite.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/MaskedTexture.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/MaskedTexture.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Meteor/Meteor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Meteor/Meteor.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,15 +36,16 @@
       <file leaf-file-name="MaskedTexture.shader" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Shaders/MaskedTexture.shader">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+            <state relative-caret-position="360">
+              <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
               <folding>
-                <marker date="1569262123000" expanded="true" signature="0:166" ph="/* Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)' ... */" />
-                <marker date="1569262123000" expanded="true" signature="191:2154" ph="{...}" />
-                <marker date="1569262123000" expanded="true" signature="210:359" ph="{...}" />
-                <marker date="1569262123000" expanded="true" signature="376:2152" ph="{...}" />
-                <marker date="1569262123000" expanded="true" signature="537:2147" ph="{...}" />
-                <marker date="1569262123000" expanded="true" signature="560:2132" ph="{...}" />
+                <marker date="1569805029882" expanded="true" signature="0:166" ph="/* Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)' ... */" />
+                <marker date="1569805029882" expanded="true" signature="191:2683" ph="{...}" />
+                <marker date="1569805029882" expanded="true" signature="210:400" ph="{...}" />
+                <marker date="1569805029882" expanded="true" signature="417:2681" ph="{...}" />
+                <marker date="1569805029882" expanded="true" signature="436:535" ph="{...}" />
+                <marker date="1569805029882" expanded="true" signature="660:2676" ph="{...}" />
+                <marker date="1569805029882" expanded="true" signature="683:2661" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -114,16 +112,54 @@
       <file leaf-file-name="Meteor.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Meteor/Meteor.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="25" column="40" lean-forward="true" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+            <state relative-caret-position="480">
+              <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
               <folding>
-                <marker date="1569801646080" expanded="false" signature="6:105" ph="..." />
-                <marker date="1569801646080" expanded="true" signature="198:2039" ph="{...}" />
-                <marker date="1569801646080" expanded="true" signature="798:893" ph="{...}" />
-                <marker date="1569801646080" expanded="true" signature="949:1924" ph="{...}" />
-                <marker date="1569801646080" expanded="true" signature="1087:1466" ph="{...}" />
-                <marker date="1569801646080" expanded="true" signature="1361:1456" ph="{...}" />
-                <marker date="1569801646080" expanded="true" signature="1951:2037" ph="{...}" />
+                <marker date="1569805356282" expanded="false" signature="6:105" ph="..." />
+                <marker date="1569805356282" expanded="true" signature="198:2188" ph="{...}" />
+                <marker date="1569805356282" expanded="true" signature="798:893" ph="{...}" />
+                <marker date="1569805356282" expanded="true" signature="949:982" ph="{...}" />
+                <marker date="1569805356282" expanded="true" signature="1035:1068" ph="{...}" />
+                <marker date="1569805356282" expanded="true" signature="1103:2073" ph="{...}" />
+                <marker date="1569805356282" expanded="true" signature="1236:1615" ph="{...}" />
+                <marker date="1569805356282" expanded="true" signature="1510:1605" ph="{...}" />
+                <marker date="1569805356282" expanded="true" signature="2100:2186" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MeteorManager.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/_Scripts/MeteorManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+              <folding>
+                <marker date="1569802348172" expanded="false" signature="6:78" ph="..." />
+                <marker date="1569802348172" expanded="true" signature="122:1060" ph="{...}" />
+                <marker date="1569802348172" expanded="true" signature="443:1058" ph="{...}" />
+                <marker date="1569802348172" expanded="true" signature="496:693" ph="/* print(&quot;---&quot;); ... */" />
+                <marker date="1569802348172" expanded="true" signature="794:1052" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShowInside.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Environment/ShowInside.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="660">
+              <caret line="46" column="32" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="32" />
+              <folding>
+                <marker date="1569801643015" expanded="false" signature="6:78" ph="..." />
+                <marker date="1569801643015" expanded="true" signature="120:1158" ph="{...}" />
+                <marker date="1569801643015" expanded="true" signature="416:565" ph="{...}" />
+                <marker date="1569801643015" expanded="true" signature="582:844" ph="{...}" />
+                <marker date="1569801643015" expanded="true" signature="866:891" ph="{...}" />
+                <marker date="1569801643015" expanded="true" signature="913:939" ph="{...}" />
+                <marker date="1569801643015" expanded="true" signature="993:1070" ph="{...}" />
+                <marker date="1569801643015" expanded="true" signature="1034:1067" ph="{...}" />
+                <marker date="1569801643015" expanded="true" signature="1124:1156" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -182,7 +218,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Shaders/MaskedTexture.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Human/Human.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/MeteorManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Human/PlayerHumanController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Environment/ShowInside.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Meteor/Meteor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Cutter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Worm/PlayerWormController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -200,8 +238,10 @@
         <option value="$PROJECT_DIR$/Assets/_Scripts/Environment/Cuttable.cs" />
         <option value="$PROJECT_DIR$/Assets/Explosion.cs" />
         <option value="$PROJECT_DIR$/Assets/MeteorManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Scripts/Meteor/Meteor.cs" />
         <option value="$PROJECT_DIR$/Assets/Shaders/ScreenspaceMaskedTexture.shader" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/MeteorManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/MaskedTexture.shader" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/Meteor/Meteor.cs" />
       </list>
     </option>
   </component>
@@ -214,9 +254,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-138" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1894" />
+    <option name="y" value="24" />
     <option name="width" value="1482" />
     <option name="height" value="976" />
   </component>
@@ -332,12 +372,12 @@
       <option name="presentableId" value="Default" />
       <updated>1569535443165</updated>
       <workItem from="1569535449056" duration="598000" />
-      <workItem from="1569729964857" duration="10057000" />
+      <workItem from="1569729964857" duration="11279000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10655000" />
+    <option name="totallyTimeSpent" value="11877000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -349,7 +389,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="24" width="1696" height="1026" extended-state="6" />
+    <frame x="1912" y="24" width="1696" height="1026" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -404,34 +444,34 @@
         <state relative-caret-position="563">
           <caret line="171" column="5" lean-forward="true" selection-start-line="171" selection-start-column="5" selection-end-line="171" selection-end-column="5" />
           <folding>
-            <marker date="1569801646076" expanded="false" signature="6:78" ph="..." />
-            <marker date="1569801646076" expanded="true" signature="168:4767" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="863:903" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="920:1861" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="1117:1212" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="1250:1322" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="1346:1778" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="1500:1665" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="1522:1660" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="1546:1613" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="1632:1654" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="1694:1774" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="1898:2203" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="2083:2170" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="2261:2892" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="2514:2738" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="2921:3045" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="3072:3196" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="3257:3438" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="3460:3645" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="3698:3761" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="3786:3806" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="3863:4293" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="4031:4289" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="4122:4148" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="4350:4388" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="4460:4659" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="4698:4765" ph="{...}" />
+            <marker date="1569804188931" expanded="false" signature="6:78" ph="..." />
+            <marker date="1569804188931" expanded="true" signature="168:4864" ph="{...}" />
+            <marker date="1569804188931" expanded="true" signature="863:903" ph="{...}" />
+            <marker date="1569804188931" expanded="true" signature="1955:1958" ph="{...}" />
+            <marker date="1569804188931" expanded="true" signature="1117:1212" ph="{...}" />
+            <marker date="1569804188931" expanded="true" signature="1250:1322" ph="{...}" />
+            <marker date="1569804188931" expanded="true" signature="1346:1778" ph="{...}" />
+            <marker date="1569804188931" expanded="true" signature="1500:1665" ph="{...}" />
+            <marker date="1569804188931" expanded="true" signature="1522:1660" ph="{...}" />
+            <marker date="1569804188931" expanded="true" signature="1546:1613" ph="{...}" />
+            <marker date="1569804188931" expanded="true" signature="1632:1654" ph="{...}" />
+            <marker date="1569804188931" expanded="true" signature="1694:1774" ph="{...}" />
+            <marker date="1569804188931" expanded="true" signature="1995:2300" ph="{...}" />
+            <marker date="1569804188931" expanded="true" signature="2180:2267" ph="{...}" />
+            <marker date="1569804188931" expanded="true" signature="2358:2989" ph="{...}" />
+            <marker date="1569804188931" expanded="true" signature="2611:2835" ph="{...}" />
+            <marker date="1569804188931" expanded="true" signature="3018:3142" ph="{...}" />
+            <marker date="1569804188931" expanded="true" signature="3169:3293" ph="{...}" />
+            <marker date="1569804188931" expanded="true" signature="3354:3535" ph="{...}" />
+            <marker date="1569804188931" expanded="true" signature="3557:3742" ph="{...}" />
+            <marker date="1569804188931" expanded="true" signature="3795:3858" ph="{...}" />
+            <marker date="1569804188931" expanded="true" signature="3883:3903" ph="{...}" />
+            <marker date="1569804188931" expanded="true" signature="3960:4390" ph="{...}" />
+            <marker date="1569804188931" expanded="true" signature="4128:4386" ph="{...}" />
+            <marker date="1569804188931" expanded="true" signature="4219:4245" ph="{...}" />
+            <marker date="1569804188931" expanded="true" signature="4447:4485" ph="{...}" />
+            <marker date="1569804188931" expanded="true" signature="4557:4756" ph="{...}" />
+            <marker date="1569804188931" expanded="true" signature="4795:4862" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -521,21 +561,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Shaders/MaskedTexture.shader">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
-          <folding>
-            <marker date="1569262123000" expanded="true" signature="0:166" ph="/* Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)' ... */" />
-            <marker date="1569262123000" expanded="true" signature="191:2154" ph="{...}" />
-            <marker date="1569262123000" expanded="true" signature="210:359" ph="{...}" />
-            <marker date="1569262123000" expanded="true" signature="376:2152" ph="{...}" />
-            <marker date="1569262123000" expanded="true" signature="537:2147" ph="{...}" />
-            <marker date="1569262123000" expanded="true" signature="560:2132" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Shaders/ScreenspaceMaskedTexture.shader">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -596,18 +621,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/MeteorManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+          <folding>
+            <marker date="1569802348172" expanded="false" signature="6:78" ph="..." />
+            <marker date="1569802348172" expanded="true" signature="122:1060" ph="{...}" />
+            <marker date="1569802348172" expanded="true" signature="443:1058" ph="{...}" />
+            <marker date="1569802348172" expanded="true" signature="496:693" ph="/* print(&quot;---&quot;); ... */" />
+            <marker date="1569802348172" expanded="true" signature="794:1052" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Shaders/MaskedTexture.shader">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+          <folding>
+            <marker date="1569805029882" expanded="true" signature="0:166" ph="/* Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)' ... */" />
+            <marker date="1569805029882" expanded="true" signature="191:2683" ph="{...}" />
+            <marker date="1569805029882" expanded="true" signature="210:400" ph="{...}" />
+            <marker date="1569805029882" expanded="true" signature="417:2681" ph="{...}" />
+            <marker date="1569805029882" expanded="true" signature="436:535" ph="{...}" />
+            <marker date="1569805029882" expanded="true" signature="660:2676" ph="{...}" />
+            <marker date="1569805029882" expanded="true" signature="683:2661" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Environment/ShowInside.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="46" column="32" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="32" />
+          <folding>
+            <marker date="1569801643015" expanded="false" signature="6:78" ph="..." />
+            <marker date="1569801643015" expanded="true" signature="120:1158" ph="{...}" />
+            <marker date="1569801643015" expanded="true" signature="416:565" ph="{...}" />
+            <marker date="1569801643015" expanded="true" signature="582:844" ph="{...}" />
+            <marker date="1569801643015" expanded="true" signature="866:891" ph="{...}" />
+            <marker date="1569801643015" expanded="true" signature="913:939" ph="{...}" />
+            <marker date="1569801643015" expanded="true" signature="993:1070" ph="{...}" />
+            <marker date="1569801643015" expanded="true" signature="1034:1067" ph="{...}" />
+            <marker date="1569801643015" expanded="true" signature="1124:1156" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Meteor/Meteor.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="25" column="40" lean-forward="true" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+        <state relative-caret-position="480">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
           <folding>
-            <marker date="1569801646080" expanded="false" signature="6:105" ph="..." />
-            <marker date="1569801646080" expanded="true" signature="198:2039" ph="{...}" />
-            <marker date="1569801646080" expanded="true" signature="798:893" ph="{...}" />
-            <marker date="1569801646080" expanded="true" signature="949:1924" ph="{...}" />
-            <marker date="1569801646080" expanded="true" signature="1087:1466" ph="{...}" />
-            <marker date="1569801646080" expanded="true" signature="1361:1456" ph="{...}" />
-            <marker date="1569801646080" expanded="true" signature="1951:2037" ph="{...}" />
+            <marker date="1569805356282" expanded="false" signature="6:105" ph="..." />
+            <marker date="1569805356282" expanded="true" signature="198:2188" ph="{...}" />
+            <marker date="1569805356282" expanded="true" signature="798:893" ph="{...}" />
+            <marker date="1569805356282" expanded="true" signature="949:982" ph="{...}" />
+            <marker date="1569805356282" expanded="true" signature="1035:1068" ph="{...}" />
+            <marker date="1569805356282" expanded="true" signature="1103:2073" ph="{...}" />
+            <marker date="1569805356282" expanded="true" signature="1236:1615" ph="{...}" />
+            <marker date="1569805356282" expanded="true" signature="1510:1605" ph="{...}" />
+            <marker date="1569805356282" expanded="true" signature="2100:2186" ph="{...}" />
           </folding>
         </state>
       </provider>

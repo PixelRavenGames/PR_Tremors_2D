@@ -29,6 +29,15 @@ public class Meteor : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        Touchdown();
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Touchdown();
+    }
+    
+    private void Touchdown() {
         var hitObjects = Physics2D.OverlapCircleAll(transform.position, maxDamageDistance);
         foreach (var hit in hitObjects)
         {
