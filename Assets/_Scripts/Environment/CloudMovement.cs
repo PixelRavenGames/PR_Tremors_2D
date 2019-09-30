@@ -20,6 +20,8 @@ public class CloudMovement : MonoBehaviour {
 	void Start() {
 		startPos = transform.position;
 		endPos = new Vector2(-transform.position.x, transform.position.y);
+
+		speed = Random.Range(minSpeed, maxSpeed);
 	}
 
 	void Update() {
@@ -28,7 +30,12 @@ public class CloudMovement : MonoBehaviour {
 
 		transform.position = Vector2.Lerp(startPos, endPos, timer);
 
-		if (timer > 1) timer = 0;
+		if (timer > 1) {
+			timer = 0;
+			if (randomizeSpeed) {
+				speed = Random.Range(minSpeed, maxSpeed);
+			}
+		}
 	}
 
 	private void OnDrawGizmos() {
