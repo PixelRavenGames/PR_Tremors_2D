@@ -12,16 +12,23 @@ public class CloudMovement : MonoBehaviour {
 	[ConditionalHide("randomizeSpeed", true, false)]
 	public float maxSpeed = 1f;
 
-	private Vector3 startPos;
-	private Vector3 endPos;
+	private Vector2 startPos;
+	private Vector2 endPos;
+
+	private float timer = 0f;
 
 	void Start() {
 		startPos = transform.position;
-		endPos = new Vector3(-transform.position.x, transform.position.y, transform.position.z);
+		endPos = new Vector2(-transform.position.x, transform.position.y);
 	}
 
 	void Update() {
 
+		timer += Time.deltaTime * speed;
+
+		transform.position = Vector2.Lerp(startPos, endPos, timer);
+
+		if (timer > 1) timer = 0;
 	}
 
 	private void OnDrawGizmos() {
