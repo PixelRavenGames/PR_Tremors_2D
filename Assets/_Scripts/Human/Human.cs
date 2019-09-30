@@ -83,7 +83,7 @@ public class Human : MonoBehaviour, IDamageable {
 			}
 
 			bool wasCrouching = isCrouching;
-			isCrouching = control.GetCrouchButton();
+			isCrouching = !control.ShouldMove() && control.GetCrouchButton();
 
 			if (!wasCrouching && isCrouching) sr.sprite = crouchSprite;
 			if (wasCrouching && !isCrouching) sr.sprite = defaultSprite;
@@ -164,7 +164,7 @@ public class Human : MonoBehaviour, IDamageable {
 	}
 
 	public void Stun(float time, float random = 0.1f) {
-		stunTime += time * Random.Range(1 - random, 1 + random);
+		stunTime += (isCrouching ? 0.25f : 1) * time * Random.Range(1 - random, 1 + random);
 	}
 
 	public bool IsAlive() {
@@ -199,12 +199,12 @@ public class Human : MonoBehaviour, IDamageable {
 		float damage = 1 - Mathf.Pow(distance / damageMultiplier, 2);
 
 		if (damage > 0.75f) Kill();
-		else Stun(damage * 10f);
+		else Stun(damage * 2f);
 
 	}
 
 	public void Damage(float rawDamage) {
 		if (rawDamage > 0.75f) Kill();
-		else Stun(rawDamage * 10f);
+		else Stun(rawDamage * 2f);
 	}
 }

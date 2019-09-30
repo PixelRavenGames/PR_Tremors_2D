@@ -106,6 +106,6 @@ public class BotHumanController : IHumanController {
 	}
 
 	public bool GetCrouchButton() {
-		return !needJump && !needMove && Random.Range(0, 100) < settings.crouchChance;
+		return Random.Range(0, 100) < settings.crouchChance;
 	}
 }
