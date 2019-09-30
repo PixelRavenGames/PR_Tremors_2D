@@ -35,9 +35,11 @@ public class Human : MonoBehaviour, IDamageable {
 	private WallSide attachedToWall = WallSide.NONE;
 
 	private Rigidbody2D rb;
+	private SpriteRenderer sr;
 
 	void Start() {
 		rb = GetComponent<Rigidbody2D>();
+		sr = GetComponent<SpriteRenderer>();
 	}
 
 	void Update() {
@@ -76,7 +78,8 @@ public class Human : MonoBehaviour, IDamageable {
 		}
 
 		attachedToWall = WallSide.NONE;
-		
+		sr.flipX = rb.velocity.x < 0;
+
 	}
 
 	public void Move(float magnitude) {
