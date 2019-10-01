@@ -8,6 +8,9 @@ public interface IHumanController {
 	float GetMoveMagnitude();
 	bool GetJumpButton();
 	bool GetCrouchButton();
+
+	bool GetDashButton();
+
 	void Update();
 
 }
