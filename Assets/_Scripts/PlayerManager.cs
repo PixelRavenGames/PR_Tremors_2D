@@ -14,6 +14,7 @@ public class PlayerManager : MonoBehaviour {
 	private string[] previousJoysticks = null;
 
 	private MeteorManager meteorManager;
+	private Cinemachine.CinemachineTargetGroup targetGroup;
 
 	private void Awake() {
 		if (instance == null) {
@@ -22,6 +23,9 @@ public class PlayerManager : MonoBehaviour {
 			Physics2D.IgnoreLayerCollision(8, 9);
 
 			meteorManager = FindObjectOfType<MeteorManager>();
+			targetGroup = FindObjectOfType<Cinemachine.CinemachineTargetGroup>();
+
+			foreach (Human human in humans) targetGroup.AddMember(human.transform, 1, 2);
 		}
 	}
 

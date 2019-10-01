@@ -195,7 +195,7 @@ public class Human : MonoBehaviour, IDamageable {
 		Destroy(Instantiate(deathEffect, transform.position, Quaternion.identity), 5);
 
 		Stun(2, 0);
-		transform.position += (Vector3)Vector2.up * 10f;
+		transform.position += (Vector3)Vector2.up * 5f;
 
 		GetComponent<SpriteRenderer>().color = new Color(0.5f, 0.75f, 1f, 0.5f);
 	}
