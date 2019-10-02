@@ -106,8 +106,6 @@ public class Human : MonoBehaviour, IDamageable {
 				rb.velocity += Vector2.up * Physics2D.gravity.y * 3 * Time.deltaTime;
 			}
 
-			
-
 			bool dashButton = control.GetDashButton();
 			if (!dashWasPressed && dashButton) Dash();
 			dashWasPressed = dashButton;
@@ -238,9 +236,10 @@ public class Human : MonoBehaviour, IDamageable {
 	}
 
 	private bool DropThrough() {
-		RaycastHit2D hit = Physics2D.Raycast((Vector2) transform.position + new Vector2(0, -0.16f), Vector2.down, 0.5f);
+		RaycastHit2D hit = Physics2D.Raycast((Vector2) transform.position + new Vector2(0, -0.17f), Vector2.down, 0.5f);
 
 		if (hit && hit.collider.GetComponent<PlatformEffector2D>()) {
+			canJump = false;
 			StartCoroutine(FullDropThrough(hit.collider));
 			return true;
 		}
