@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\arow4\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_PR_Tremors_2D.508089592.00" t="ExcludeRecursive" />
-    <e p="C:\Users\arow4\Projects\PR_Tremors_2D" t="IncludeRecursive">
+    <e p="C:\Users\008000118\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\008000118\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_PR_Tremors_2D.-245658209.00" t="ExcludeRecursive" />
+    <e p="E:\PR_Tremors_2D" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -11,14 +12,16 @@
           <e p="Camera" t="Include">
             <e p="CameraZoom.cs" t="Include" />
           </e>
-          <e p="Cutter.cs" t="Include" />
           <e p="EditorScripts" t="Include">
             <e p="PropertyDrawers" t="Include">
               <e p="ConditionalHideAttribute.cs" t="Include" />
             </e>
           </e>
           <e p="Environment" t="Include">
+            <e p="CloudMovement.cs" t="Include" />
             <e p="Cuttable.cs" t="Include" />
+            <e p="KillTrigger.cs" t="Include" />
+            <e p="ParticleSplatter.cs" t="Include" />
             <e p="ShowInside.cs" t="Include" />
           </e>
           <e p="Human" t="Include">
@@ -37,11 +40,16 @@
           </e>
           <e p="MeteorManager.cs" t="Include" />
           <e p="PlayerManager.cs" t="Include" />
-          <e p="Triangulator.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="Humans" t="Include">
               <e p="PlayerIndicator.cs" t="Include" />
+              <e p="StunIndicator.cs" t="Include" />
             </e>
+          </e>
+          <e p="Utility" t="Include">
+            <e p="Cutter.cs" t="Include" />
+            <e p="ParticleSystemAutoDestroy.cs" t="Include" />
+            <e p="Triangulator.cs" t="Include" />
           </e>
           <e p="Worm" t="Include">
             <e p="IWormController.cs" t="Include" />
@@ -71,13 +79,10 @@
           <e p="ScreenspaceMaskedTexture.shader" t="Include" />
         </e>
       </e>
-      <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="PR_Tremors_2D.sln" t="IncludeFlat" />
-      <e p="Temp" t="ExcludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-      </e>
+      <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
   </component>
 </project>

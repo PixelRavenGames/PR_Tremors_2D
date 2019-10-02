@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 991585286582230722}
   - component: {fileID: 5265139288750682039}
   - component: {fileID: 793648862728876717}
+  - component: {fileID: 7103103766761010617}
   m_Layer: 0
   m_Name: BuildingFacade1
   m_TagString: Untagged
@@ -139,3 +140,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   polygonCollider: {fileID: 0}
+--- !u!114 &7103103766761010617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991585286582230751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79a67891fece514bb6f4e87eee4299c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles: {fileID: 2172467023381109319, guid: 332197f4bc38bf943a6fa266077f1055,
+    type: 3}
