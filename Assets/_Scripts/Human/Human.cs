@@ -252,12 +252,14 @@ public class Human : MonoBehaviour, IDamageable {
 
 		float damage = 1 - Mathf.Pow(distance / damageMultiplier, 2);
 
-		if (damage > 0.75f) Kill();
-		else Stun(damage * 2f);
+		Damage(damage);
 
 	}
 
 	public void Damage(float rawDamage) {
+
+		if (!alive) return;
+
 		if (rawDamage > 0.75f) Kill();
 		else Stun(rawDamage * 2f);
 	}
