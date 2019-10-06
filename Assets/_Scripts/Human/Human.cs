@@ -13,6 +13,8 @@ public class Human : MonoBehaviour, IDamageable {
 
 	[Header("Settings")]
 	[SerializeField]
+	private int maxJumpCount = 2;
+	[SerializeField]
 	private float jumpHeight = 3;
 	[SerializeField]
 	private float fallModifier = 1f;
@@ -37,6 +39,7 @@ public class Human : MonoBehaviour, IDamageable {
 	private bool jumpWasPressed = false;
 	private bool canJump = false;
 	private bool canWallJump = false;
+	private int jumpCount = 0;
 
 	private bool dashWasPressed = false;
 
@@ -67,9 +70,8 @@ public class Human : MonoBehaviour, IDamageable {
 	void Update() {
 		if (control == null) return;
 
+		canWallJump = false;
 		canWallJump = (attachedToWall == WallSide.LEFT) || (attachedToWall == WallSide.RIGHT);
-
-		if (Input.GetKeyDown(KeyCode.Space)) Kill();
 
 		if (rb.velocity.y < 0) {
 			rb.velocity += Vector2.up * Physics2D.gravity.y * (fallModifier - 1) * Time.deltaTime;
@@ -121,7 +123,6 @@ public class Human : MonoBehaviour, IDamageable {
 
 		attachedToWall = WallSide.NONE;
 		sr.flipX = rb.velocity.x < 0;
-
 	}
 
 	public void Move(float magnitude) {
@@ -156,7 +157,8 @@ public class Human : MonoBehaviour, IDamageable {
 
 		rb.velocity = new Vector2(rb.velocity.x + jumpVector.x, jumpVector.y);
 
-		canJump = false;
+		jumpCount++;
+		if (jumpCount >= maxJumpCount) canJump = false;
 		attachedToWall = WallSide.NONE;
 		canWallJump = false;
 	}
@@ -219,6 +221,7 @@ public class Human : MonoBehaviour, IDamageable {
 			Vector2 point = transform.InverseTransformPoint(cp.point);
 
 			if (point.y <= -0.10f) {
+				jumpCount = 0;
 				canJump = true;
 			} else {
 				if (!collision.collider.GetComponent<PlatformEffector2D>()) {
@@ -233,6 +236,8 @@ public class Human : MonoBehaviour, IDamageable {
 
 	private void OnCollisionExit2D(Collision2D collision) {
 		attachedToWall = WallSide.NONE;
+		jumpCount++;
+		canWallJump = false;
 	}
 
 	private bool DropThrough() {
