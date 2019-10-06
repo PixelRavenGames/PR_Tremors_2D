@@ -2,230 +2,70 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3615de77-0cc7-46cc-8384-cbe2f709a430" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Explosion Long 2.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Explosion Long 2.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Explosion Long.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Explosion Long.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Explosion Short.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Explosion Short.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Explosion.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Explosion.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Meteor Falling.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sound/SFX/Meteor Falling.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Prefabs/Particle_Effects/NonAdditive.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Prefabs/Particle_Effects/NonAdditive/Building_Splatter_PE Variant.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Prefabs/Particle_Effects/NonAdditive/Building_Splatter_PE Variant.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Prefabs/Particle_Effects/NonAdditive/Ground_Splatter_PE Variant.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Prefabs/Particle_Effects/NonAdditive/Ground_Splatter_PE Variant.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Prefabs/Particle_Effects/NonAdditive/Meteor_Splatter_PE Variant.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Prefabs/Particle_Effects/NonAdditive/Meteor_Splatter_PE Variant.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Scenes/KyleScene.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Scenes/KyleScene.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/Environment/ParticleSplatter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/Environment/ParticleSplatter.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PR_Tremors_2D/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PR_Tremors_2D/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PR_Tremors_2D/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PR_Tremors_2D/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PR_Tremors_2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PR_Tremors_2D/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/CuttableSprite.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/CuttableSprite.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/MaskedTexture.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/MaskedTexture.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Bakery_Everywhere.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Bakery_Everywhere.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Ground_Everywhere.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Ground_Everywhere.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Meteor_Everywhere.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Meteor_Everywhere.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Level/Buildings/BuildingFacade1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Level/Buildings/BuildingFacade1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Level/Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Level/Camera.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Level/Level Kit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Level/Level Kit.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Meteor/Explosion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Meteor/Explosion.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Meteor/Meteor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Meteor/Meteor.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/NickScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/NickScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Meteor/Explosion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Meteor/Explosion.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Meteor/Meteor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Meteor/Meteor.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Cuttable.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Environment/Cuttable.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="40" selection-start-line="40" selection-end-line="40" />
-              <folding>
-                <marker date="1569801646075" expanded="false" signature="6:240" ph="..." />
-                <marker date="1569801646075" expanded="true" signature="325:2653" ph="{...}" />
-                <marker date="1569801646075" expanded="true" signature="525:686" ph="{...}" />
-                <marker date="1569801646075" expanded="true" signature="733:992" ph="{...}" />
-                <marker date="1569801646075" expanded="true" signature="1027:2651" ph="{...}" />
-                <marker date="1569801646075" expanded="true" signature="1281:1397" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MaskedTexture.shader" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Shaders/MaskedTexture.shader">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-              <folding>
-                <marker date="1569805029882" expanded="true" signature="0:166" ph="/* Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)' ... */" />
-                <marker date="1569805029882" expanded="true" signature="191:2683" ph="{...}" />
-                <marker date="1569805029882" expanded="true" signature="210:400" ph="{...}" />
-                <marker date="1569805029882" expanded="true" signature="417:2681" ph="{...}" />
-                <marker date="1569805029882" expanded="true" signature="436:535" ph="{...}" />
-                <marker date="1569805029882" expanded="true" signature="660:2676" ph="{...}" />
-                <marker date="1569805029882" expanded="true" signature="683:2661" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScreenspaceMaskedTexture.shader" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Shaders/ScreenspaceMaskedTexture.shader">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
-              <folding>
-                <marker date="1569801646097" expanded="true" signature="0:250" ph="/* Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)' ... */" />
-                <marker date="1569801646097" expanded="true" signature="285:2373" ph="{...}" />
-                <marker date="1569801646097" expanded="true" signature="304:453" ph="{...}" />
-                <marker date="1569801646097" expanded="true" signature="470:2371" ph="{...}" />
-                <marker date="1569801646097" expanded="true" signature="631:2366" ph="{...}" />
-                <marker date="1569801646097" expanded="true" signature="654:2351" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Cutter.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Cutter.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-67">
-              <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
-              <folding>
-                <marker date="1569801646076" expanded="false" signature="6:346" ph="..." />
-                <marker date="1569801646076" expanded="true" signature="383:2891" ph="{...}" />
-                <marker date="1569801646076" expanded="true" signature="487:2889" ph="{...}" />
-                <marker date="1569801646076" expanded="true" signature="669:2883" ph="{...}" />
-                <marker date="1569801646076" expanded="true" signature="1046:1363" ph="{...}" />
-                <marker date="1569801646076" expanded="true" signature="1102:1339" ph="{...}" />
-                <marker date="1569801646076" expanded="true" signature="1455:1708" ph="{...}" />
-                <marker date="1569801646076" expanded="true" signature="2056:2775" ph="{...}" />
-                <marker date="1569801646076" expanded="true" signature="2127:2761" ph="{...}" />
-                <marker date="1569801646076" expanded="true" signature="2176:2489" ph="{...}" />
-                <marker date="1569801646076" expanded="true" signature="2360:2467" ph="{...}" />
-                <marker date="1569801646076" expanded="true" signature="2792:2873" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerWormController.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Worm/PlayerWormController.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-              <folding>
-                <marker date="1569535364795" expanded="false" signature="6:113" ph="..." />
-                <marker date="1569535364795" expanded="true" signature="166:825" ph="{...}" />
-                <marker date="1569535364795" expanded="true" signature="251:307" ph="{...}" />
-                <marker date="1569535364795" expanded="true" signature="350:696" ph="{...}" />
-                <marker date="1569535364795" expanded="true" signature="600:655" ph="{...}" />
-                <marker date="1569535364795" expanded="true" signature="727:761" ph="{...}" />
-                <marker date="1569535364795" expanded="true" signature="790:823" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Meteor.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Meteor/Meteor.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-              <folding>
-                <marker date="1569805356282" expanded="false" signature="6:105" ph="..." />
-                <marker date="1569805356282" expanded="true" signature="198:2188" ph="{...}" />
-                <marker date="1569805356282" expanded="true" signature="798:893" ph="{...}" />
-                <marker date="1569805356282" expanded="true" signature="949:982" ph="{...}" />
-                <marker date="1569805356282" expanded="true" signature="1035:1068" ph="{...}" />
-                <marker date="1569805356282" expanded="true" signature="1103:2073" ph="{...}" />
-                <marker date="1569805356282" expanded="true" signature="1236:1615" ph="{...}" />
-                <marker date="1569805356282" expanded="true" signature="1510:1605" ph="{...}" />
-                <marker date="1569805356282" expanded="true" signature="2100:2186" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MeteorManager.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/_Scripts/MeteorManager.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-              <folding>
-                <marker date="1569802348172" expanded="false" signature="6:78" ph="..." />
-                <marker date="1569802348172" expanded="true" signature="122:1060" ph="{...}" />
-                <marker date="1569802348172" expanded="true" signature="443:1058" ph="{...}" />
-                <marker date="1569802348172" expanded="true" signature="496:693" ph="/* print(&quot;---&quot;); ... */" />
-                <marker date="1569802348172" expanded="true" signature="794:1052" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShowInside.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Environment/ShowInside.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="46" column="32" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="32" />
-              <folding>
-                <marker date="1569801643015" expanded="false" signature="6:78" ph="..." />
-                <marker date="1569801643015" expanded="true" signature="120:1158" ph="{...}" />
-                <marker date="1569801643015" expanded="true" signature="416:565" ph="{...}" />
-                <marker date="1569801643015" expanded="true" signature="582:844" ph="{...}" />
-                <marker date="1569801643015" expanded="true" signature="866:891" ph="{...}" />
-                <marker date="1569801643015" expanded="true" signature="913:939" ph="{...}" />
-                <marker date="1569801643015" expanded="true" signature="993:1070" ph="{...}" />
-                <marker date="1569801643015" expanded="true" signature="1034:1067" ph="{...}" />
-                <marker date="1569801643015" expanded="true" signature="1124:1156" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerManager.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/_Scripts/PlayerManager.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-              <folding>
-                <marker date="1569726526057" expanded="false" signature="6:78" ph="..." />
-                <marker date="1569726526057" expanded="true" signature="123:1769" ph="{...}" />
-                <marker date="1569726526057" expanded="true" signature="313:408" ph="{...}" />
-                <marker date="1569726526057" expanded="true" signature="339:405" ph="{...}" />
-                <marker date="1569726526057" expanded="true" signature="433:1163" ph="{...}" />
-                <marker date="1569726526057" expanded="true" signature="518:702" ph="{...}" />
-                <marker date="1569726526057" expanded="true" signature="746:1125" ph="{...}" />
-                <marker date="1569726526057" expanded="true" signature="854:942" ph="{...}" />
-                <marker date="1569726526057" expanded="true" signature="1022:1120" ph="{...}" />
-                <marker date="1569726526057" expanded="true" signature="1232:1328" ph="{...}" />
-                <marker date="1569726526057" expanded="true" signature="1362:1466" ph="{...}" />
-                <marker date="1569726526057" expanded="true" signature="1413:1449" ph="{...}" />
-                <marker date="1569726526057" expanded="true" signature="1507:1536" ph="{...}" />
-                <marker date="1569726526057" expanded="true" signature="1577:1766" ph="{...}" />
-                <marker date="1569726526057" expanded="true" signature="1690:1737" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerHumanController.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Human/PlayerHumanController.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <marker date="1569451221884" expanded="false" signature="6:78" ph="..." />
-                <marker date="1569451221884" expanded="true" signature="134:787" ph="{...}" />
-                <marker date="1569451221884" expanded="true" signature="335:399" ph="{...}" />
-                <marker date="1569451221884" expanded="true" signature="430:455" ph="{...}" />
-                <marker date="1569451221884" expanded="true" signature="490:515" ph="{...}" />
-                <marker date="1569451221884" expanded="true" signature="543:573" ph="{...}" />
-                <marker date="1569451221884" expanded="true" signature="597:785" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Shaders/ScreenspaceMaskedTexture.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.2.9/Runtime/Impulse/CinemachineImpulseSource.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Shaders/MaskedTexture.shader" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Human/Human.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/MeteorManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.2.9/Runtime/Impulse/CinemachineCollisionImpulseSource.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Utility/ParticleSystemAutoDestroy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Human/Human.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Human/PlayerHumanController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Environment/ShowInside.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Meteor/Explosion.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Meteor/Meteor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Cutter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Worm/PlayerWormController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Environment/Cuttable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Interfaces/IDamageable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Environment/ShowInside.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Environment/Cuttable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Environment/ParticleSplatter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Worm/PlayerWormController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -241,105 +81,17 @@
         <option value="$PROJECT_DIR$/Assets/Shaders/ScreenspaceMaskedTexture.shader" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/MeteorManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Shaders/MaskedTexture.shader" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/Meteor/Explosion.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/Meteor/Meteor.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/Environment/ParticleSplatter.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/Utility/ParticleSystemAutoDestroy.cs" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1894" />
-    <option name="y" value="24" />
-    <option name="width" value="1482" />
-    <option name="height" value="976" />
-  </component>
-  <component name="ProjectView">
-    <navigator currentView="SolutionExplorer" proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scratches" />
-      <pane id="UnityExplorer">
-        <subPane>
-          <expand>
-            <path>
-              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="PR_Tremors_2D" type="483dac07:UnityExplorerNode$Root" />
-            </path>
-            <path>
-              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="PR_Tremors_2D" type="483dac07:UnityExplorerNode$Root" />
-              <item name="" type="1045f7f1:UnityExplorerNode" />
-            </path>
-            <path>
-              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="PR_Tremors_2D" type="483dac07:UnityExplorerNode$Root" />
-              <item name="" type="1045f7f1:UnityExplorerNode" />
-              <item name="" type="1045f7f1:UnityExplorerNode" />
-            </path>
-            <path>
-              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="PR_Tremors_2D" type="483dac07:UnityExplorerNode$Root" />
-              <item name="" type="1045f7f1:UnityExplorerNode" />
-              <item name="" type="1045f7f1:UnityExplorerNode" />
-            </path>
-            <path>
-              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="PR_Tremors_2D" type="483dac07:UnityExplorerNode$Root" />
-              <item name="" type="1045f7f1:UnityExplorerNode" />
-              <item name="" type="1045f7f1:UnityExplorerNode" />
-            </path>
-            <path>
-              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="PR_Tremors_2D" type="483dac07:UnityExplorerNode$Root" />
-              <item name="" type="1045f7f1:UnityExplorerNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <option name="show-hidden-items" value="false" />
-      </pane>
-      <pane id="SolutionExplorer">
-        <subPane>
-          <expand>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="PR_Tremors_2D (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="PR_Tremors_2D (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="PR_Tremors_2D (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="PR_Tremors_2D (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Shaders" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <option name="show-file-system" value="false" />
-        <option name="show-all-items" value="false" />
-      </pane>
-    </panes>
-  </component>
+  <component name="ProjectId" id="1RekbNHd3bepcsBcJTU2K7NGQCP" />
   <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
@@ -355,10 +107,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="userSelectedPid" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="userSelectedPid" value="false" />
+      <method v="2" />
     </configuration>
   </component>
   <component name="SvnConfiguration">
@@ -373,319 +135,37 @@
       <updated>1569535443165</updated>
       <workItem from="1569535449056" duration="598000" />
       <workItem from="1569729964857" duration="11279000" />
+      <workItem from="1570035027608" duration="5366000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11877000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="1912" y="24" width="1696" height="1026" extended-state="7" />
-    <editor active="true" />
-    <layout>
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Errors In Solution" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Unit Tests" order="7" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2200489" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Unity" order="7" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="NuGet" order="7" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Environment/Cuttable.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <marker date="1569801646075" expanded="false" signature="6:240" ph="..." />
-            <marker date="1569801646075" expanded="true" signature="325:2653" ph="{...}" />
-            <marker date="1569801646075" expanded="true" signature="525:686" ph="{...}" />
-            <marker date="1569801646075" expanded="true" signature="733:992" ph="{...}" />
-            <marker date="1569801646075" expanded="true" signature="1027:2651" ph="{...}" />
-            <marker date="1569801646075" expanded="true" signature="1281:1397" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Human/Human.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="171" column="5" lean-forward="true" selection-start-line="171" selection-start-column="5" selection-end-line="171" selection-end-column="5" />
-          <folding>
-            <marker date="1569804188931" expanded="false" signature="6:78" ph="..." />
-            <marker date="1569804188931" expanded="true" signature="168:4864" ph="{...}" />
-            <marker date="1569804188931" expanded="true" signature="863:903" ph="{...}" />
-            <marker date="1569804188931" expanded="true" signature="1955:1958" ph="{...}" />
-            <marker date="1569804188931" expanded="true" signature="1117:1212" ph="{...}" />
-            <marker date="1569804188931" expanded="true" signature="1250:1322" ph="{...}" />
-            <marker date="1569804188931" expanded="true" signature="1346:1778" ph="{...}" />
-            <marker date="1569804188931" expanded="true" signature="1500:1665" ph="{...}" />
-            <marker date="1569804188931" expanded="true" signature="1522:1660" ph="{...}" />
-            <marker date="1569804188931" expanded="true" signature="1546:1613" ph="{...}" />
-            <marker date="1569804188931" expanded="true" signature="1632:1654" ph="{...}" />
-            <marker date="1569804188931" expanded="true" signature="1694:1774" ph="{...}" />
-            <marker date="1569804188931" expanded="true" signature="1995:2300" ph="{...}" />
-            <marker date="1569804188931" expanded="true" signature="2180:2267" ph="{...}" />
-            <marker date="1569804188931" expanded="true" signature="2358:2989" ph="{...}" />
-            <marker date="1569804188931" expanded="true" signature="2611:2835" ph="{...}" />
-            <marker date="1569804188931" expanded="true" signature="3018:3142" ph="{...}" />
-            <marker date="1569804188931" expanded="true" signature="3169:3293" ph="{...}" />
-            <marker date="1569804188931" expanded="true" signature="3354:3535" ph="{...}" />
-            <marker date="1569804188931" expanded="true" signature="3557:3742" ph="{...}" />
-            <marker date="1569804188931" expanded="true" signature="3795:3858" ph="{...}" />
-            <marker date="1569804188931" expanded="true" signature="3883:3903" ph="{...}" />
-            <marker date="1569804188931" expanded="true" signature="3960:4390" ph="{...}" />
-            <marker date="1569804188931" expanded="true" signature="4128:4386" ph="{...}" />
-            <marker date="1569804188931" expanded="true" signature="4219:4245" ph="{...}" />
-            <marker date="1569804188931" expanded="true" signature="4447:4485" ph="{...}" />
-            <marker date="1569804188931" expanded="true" signature="4557:4756" ph="{...}" />
-            <marker date="1569804188931" expanded="true" signature="4795:4862" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Worm/Cutter.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Meteor.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Interfaces/IDamageable.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding>
-            <marker date="1569801646073" expanded="false" signature="6:78" ph="..." />
-            <marker date="1569801646073" expanded="true" signature="109:209" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Environment/Cuttable.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <marker date="1569801646075" expanded="false" signature="6:240" ph="..." />
-            <marker date="1569801646075" expanded="true" signature="325:2653" ph="{...}" />
-            <marker date="1569801646075" expanded="true" signature="525:686" ph="{...}" />
-            <marker date="1569801646075" expanded="true" signature="733:992" ph="{...}" />
-            <marker date="1569801646075" expanded="true" signature="1027:2651" ph="{...}" />
-            <marker date="1569801646075" expanded="true" signature="1281:1397" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Worm/PlayerWormController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <marker date="1569535364795" expanded="false" signature="6:113" ph="..." />
-            <marker date="1569535364795" expanded="true" signature="166:825" ph="{...}" />
-            <marker date="1569535364795" expanded="true" signature="251:307" ph="{...}" />
-            <marker date="1569535364795" expanded="true" signature="350:696" ph="{...}" />
-            <marker date="1569535364795" expanded="true" signature="600:655" ph="{...}" />
-            <marker date="1569535364795" expanded="true" signature="727:761" ph="{...}" />
-            <marker date="1569535364795" expanded="true" signature="790:823" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Human/PlayerHumanController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <marker date="1569451221884" expanded="false" signature="6:78" ph="..." />
-            <marker date="1569451221884" expanded="true" signature="134:787" ph="{...}" />
-            <marker date="1569451221884" expanded="true" signature="335:399" ph="{...}" />
-            <marker date="1569451221884" expanded="true" signature="430:455" ph="{...}" />
-            <marker date="1569451221884" expanded="true" signature="490:515" ph="{...}" />
-            <marker date="1569451221884" expanded="true" signature="543:573" ph="{...}" />
-            <marker date="1569451221884" expanded="true" signature="597:785" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/MeteorManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Explosion.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Shaders/ScreenspaceMaskedTexture.shader">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
-          <folding>
-            <marker date="1569801646097" expanded="true" signature="0:250" ph="/* Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)' ... */" />
-            <marker date="1569801646097" expanded="true" signature="285:2373" ph="{...}" />
-            <marker date="1569801646097" expanded="true" signature="304:453" ph="{...}" />
-            <marker date="1569801646097" expanded="true" signature="470:2371" ph="{...}" />
-            <marker date="1569801646097" expanded="true" signature="631:2366" ph="{...}" />
-            <marker date="1569801646097" expanded="true" signature="654:2351" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Cutter.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-67">
-          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
-          <folding>
-            <marker date="1569801646076" expanded="false" signature="6:346" ph="..." />
-            <marker date="1569801646076" expanded="true" signature="383:2891" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="487:2889" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="669:2883" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="1046:1363" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="1102:1339" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="1455:1708" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="2056:2775" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="2127:2761" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="2176:2489" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="2360:2467" ph="{...}" />
-            <marker date="1569801646076" expanded="true" signature="2792:2873" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/PlayerManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-          <folding>
-            <marker date="1569726526057" expanded="false" signature="6:78" ph="..." />
-            <marker date="1569726526057" expanded="true" signature="123:1769" ph="{...}" />
-            <marker date="1569726526057" expanded="true" signature="313:408" ph="{...}" />
-            <marker date="1569726526057" expanded="true" signature="339:405" ph="{...}" />
-            <marker date="1569726526057" expanded="true" signature="433:1163" ph="{...}" />
-            <marker date="1569726526057" expanded="true" signature="518:702" ph="{...}" />
-            <marker date="1569726526057" expanded="true" signature="746:1125" ph="{...}" />
-            <marker date="1569726526057" expanded="true" signature="854:942" ph="{...}" />
-            <marker date="1569726526057" expanded="true" signature="1022:1120" ph="{...}" />
-            <marker date="1569726526057" expanded="true" signature="1232:1328" ph="{...}" />
-            <marker date="1569726526057" expanded="true" signature="1362:1466" ph="{...}" />
-            <marker date="1569726526057" expanded="true" signature="1413:1449" ph="{...}" />
-            <marker date="1569726526057" expanded="true" signature="1507:1536" ph="{...}" />
-            <marker date="1569726526057" expanded="true" signature="1577:1766" ph="{...}" />
-            <marker date="1569726526057" expanded="true" signature="1690:1737" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/MeteorManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-          <folding>
-            <marker date="1569802348172" expanded="false" signature="6:78" ph="..." />
-            <marker date="1569802348172" expanded="true" signature="122:1060" ph="{...}" />
-            <marker date="1569802348172" expanded="true" signature="443:1058" ph="{...}" />
-            <marker date="1569802348172" expanded="true" signature="496:693" ph="/* print(&quot;---&quot;); ... */" />
-            <marker date="1569802348172" expanded="true" signature="794:1052" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Shaders/MaskedTexture.shader">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-          <folding>
-            <marker date="1569805029882" expanded="true" signature="0:166" ph="/* Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)' ... */" />
-            <marker date="1569805029882" expanded="true" signature="191:2683" ph="{...}" />
-            <marker date="1569805029882" expanded="true" signature="210:400" ph="{...}" />
-            <marker date="1569805029882" expanded="true" signature="417:2681" ph="{...}" />
-            <marker date="1569805029882" expanded="true" signature="436:535" ph="{...}" />
-            <marker date="1569805029882" expanded="true" signature="660:2676" ph="{...}" />
-            <marker date="1569805029882" expanded="true" signature="683:2661" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Environment/ShowInside.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="46" column="32" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="32" />
-          <folding>
-            <marker date="1569801643015" expanded="false" signature="6:78" ph="..." />
-            <marker date="1569801643015" expanded="true" signature="120:1158" ph="{...}" />
-            <marker date="1569801643015" expanded="true" signature="416:565" ph="{...}" />
-            <marker date="1569801643015" expanded="true" signature="582:844" ph="{...}" />
-            <marker date="1569801643015" expanded="true" signature="866:891" ph="{...}" />
-            <marker date="1569801643015" expanded="true" signature="913:939" ph="{...}" />
-            <marker date="1569801643015" expanded="true" signature="993:1070" ph="{...}" />
-            <marker date="1569801643015" expanded="true" signature="1034:1067" ph="{...}" />
-            <marker date="1569801643015" expanded="true" signature="1124:1156" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Meteor/Meteor.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-          <folding>
-            <marker date="1569805356282" expanded="false" signature="6:105" ph="..." />
-            <marker date="1569805356282" expanded="true" signature="198:2188" ph="{...}" />
-            <marker date="1569805356282" expanded="true" signature="798:893" ph="{...}" />
-            <marker date="1569805356282" expanded="true" signature="949:982" ph="{...}" />
-            <marker date="1569805356282" expanded="true" signature="1035:1068" ph="{...}" />
-            <marker date="1569805356282" expanded="true" signature="1103:2073" ph="{...}" />
-            <marker date="1569805356282" expanded="true" signature="1236:1615" ph="{...}" />
-            <marker date="1569805356282" expanded="true" signature="1510:1605" ph="{...}" />
-            <marker date="1569805356282" expanded="true" signature="2100:2186" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="VcsManagerConfiguration">
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

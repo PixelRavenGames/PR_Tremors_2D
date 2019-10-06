@@ -84,8 +84,16 @@ public class Human : MonoBehaviour, IDamageable {
 			control.Update();
 			if (control.ShouldMove()) Move(control.GetMoveMagnitude());
 
+			bool wasCrouching = isCrouching;
+			isCrouching = !control.ShouldMove() && control.GetCrouchButton();
+
+			if (!wasCrouching && isCrouching) sr.sprite = crouchSprite;
+			if (wasCrouching && !isCrouching) sr.sprite = defaultSprite;
+
 			bool isJumpDown = IsJumpDown();
+			if (isCrouching && control.GetJumpButton() && DropThrough()) {} else
 			if (control.GetJumpButton()) {
+
 				if (isJumpDown) {
 					if (canWallJump) {
 						Jump(3, attachedToWall == WallSide.LEFT ? -45 : 45);
@@ -93,15 +101,10 @@ public class Human : MonoBehaviour, IDamageable {
 						Jump();
 					}
 				}
+
 			} else if (rb.velocity.y > 0) {
 				rb.velocity += Vector2.up * Physics2D.gravity.y * 3 * Time.deltaTime;
 			}
-
-			bool wasCrouching = isCrouching;
-			isCrouching = !control.ShouldMove() && control.GetCrouchButton();
-
-			if (!wasCrouching && isCrouching) sr.sprite = crouchSprite;
-			if (wasCrouching && !isCrouching) sr.sprite = defaultSprite;
 
 			bool dashButton = control.GetDashButton();
 			if (!dashWasPressed && dashButton) Dash();
@@ -218,8 +221,10 @@ public class Human : MonoBehaviour, IDamageable {
 			if (point.y <= -0.10f) {
 				canJump = true;
 			} else {
-				if (point.x < -0.07f) { attachedToWall = WallSide.LEFT; }
-				if (point.x > 0.07f) { attachedToWall = WallSide.RIGHT; }
+				if (!collision.collider.GetComponent<PlatformEffector2D>()) {
+					if (point.x < -0.07f) { attachedToWall = WallSide.LEFT; }
+					if (point.x > 0.07f) { attachedToWall = WallSide.RIGHT; }
+				}
 			}
 
 		}
@@ -230,18 +235,43 @@ public class Human : MonoBehaviour, IDamageable {
 		attachedToWall = WallSide.NONE;
 	}
 
+	private bool DropThrough() {
+		RaycastHit2D hit = Physics2D.Raycast((Vector2) transform.position + new Vector2(0, -0.17f), Vector2.down, 0.5f);
+
+		if (hit && hit.collider.GetComponent<PlatformEffector2D>()) {
+			canJump = false;
+			StartCoroutine(FullDropThrough(hit.collider));
+			return true;
+		}
+
+		return false;
+	}
+
 	public void Damage(Vector2 damageSource, float damageMultiplier = 1) {
 		float distance = Vector2.Distance(transform.position, damageSource);
 
 		float damage = 1 - Mathf.Pow(distance / damageMultiplier, 2);
 
-		if (damage > 0.75f) Kill();
-		else Stun(damage * 2f);
+		Damage(damage);
 
 	}
 
 	public void Damage(float rawDamage) {
+
+		if (!alive) return;
+
 		if (rawDamage > 0.75f) Kill();
 		else Stun(rawDamage * 2f);
 	}
+
+	public IEnumerator FullDropThrough(Collider2D col) {
+
+		Physics2D.IgnoreCollision(GetComponent<Collider2D>(), col, true);
+
+		yield return new WaitForSeconds(0.2f);
+
+		Physics2D.IgnoreCollision(GetComponent<Collider2D>(), col, false);
+
+	}
+
 }

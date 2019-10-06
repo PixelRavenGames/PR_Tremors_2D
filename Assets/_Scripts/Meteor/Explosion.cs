@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.UIElements;
 
+[RequireComponent(typeof(AudioSource))]
 public class Explosion : MonoBehaviour
 {
     public void Explode(float radius)
