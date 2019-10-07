@@ -98,10 +98,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controllerNum: 0
+  maxJumpCount: 2
   jumpHeight: 1
   fallModifier: 2.5
-  speed: 1
-  dashSpeed: 20
+  speed: 4
+  dashSpeed: 40
   dashCooldown: 1
   indicator: {fileID: 3384962681002845633}
   stunIndicator: {fileID: 5464119763650454104}

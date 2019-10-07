@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8895856551724107669}
   - component: {fileID: 8895856551724107666}
   - component: {fileID: 8895856551724107668}
+  - component: {fileID: 1727936293203851317}
   m_Layer: 9
   m_Name: Car
   m_TagString: Untagged
@@ -128,3 +129,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1727936293203851317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8895856551724107664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2586ce13ee8729a428f3c5e37037ab35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionForce: 8
+  damageThreshold: 0.75

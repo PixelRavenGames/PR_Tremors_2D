@@ -66,6 +66,16 @@ public class PlayerManager : MonoBehaviour {
 		return ret;
 	}
 
+	public int[] GetRemainingPlayers() {
+		List<int> ret = new List<int>();
+
+		for (int i = 0; i < humans.Length; i++) {
+			if (humans[i].IsAlive()) ret.Add(i + 1);
+		}
+
+		return ret.ToArray();
+	}
+
 	public Vector2[] GetMeteorPositions() {
 
 		List<GameObject> meteors = meteorManager.meteors;
