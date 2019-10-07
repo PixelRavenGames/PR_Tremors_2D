@@ -20,6 +20,7 @@ public class HumanEffectInstance {
 
 	public void Update() {
 		duration -= Time.deltaTime;
+		if (!effect.CanContinue()) duration = -1;
 	}
 
 	public void OnStartEffect(Human human) {

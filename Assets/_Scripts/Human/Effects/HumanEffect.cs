@@ -11,5 +11,7 @@ public abstract class HumanEffect : MonoBehaviour {
 	public virtual void OnEndEffect(Human human) {/*MT*/}
 
 	public virtual void OnDamageTaken(Human human, float damage) {/*MT*/}
+
+	public virtual bool CanContinue() { return true; }
 	
 }

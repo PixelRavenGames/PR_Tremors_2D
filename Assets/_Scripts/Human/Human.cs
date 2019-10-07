@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Human : MonoBehaviour, IDamageable {
@@ -34,7 +35,8 @@ public class Human : MonoBehaviour, IDamageable {
 	public Sprite defaultSprite;
 	public Sprite crouchSprite;
 
-	// TODO [Header("Events")]
+	[Header("Events")]
+	public OnHurtEvent onHurt = new OnHurtEvent();
 
 	private bool jumpWasPressed = false;
 	private bool canJump = false;
@@ -265,7 +267,9 @@ public class Human : MonoBehaviour, IDamageable {
 
 	public void Damage(float rawDamage) {
 
-		if (!alive || invulnerable) return;
+		if (!alive || invulnerable) rawDamage = 0;
+
+		onHurt.Invoke(rawDamage);
 
 		if (rawDamage > 0.75f) Kill();
 		else Stun(rawDamage * 2f);
@@ -289,4 +293,20 @@ public class Human : MonoBehaviour, IDamageable {
 		this.maxJumpCount = maxJumpCount;
 	}
 
+	public float GetDashSpeed() {
+		return dashSpeed;
+	}
+
+	public void SetDashSpeed(float dashSpeed) {
+		this.dashSpeed = dashSpeed;
+	}
+
+	public void SetInvulnerable(bool invulnerable) {
+		this.invulnerable = invulnerable;
+	}
+
 }
+
+#region Events
+public class OnHurtEvent : UnityEvent<float> {}
+#endregion

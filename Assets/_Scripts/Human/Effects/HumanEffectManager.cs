@@ -9,6 +9,8 @@ public class HumanEffectManager : MonoBehaviour {
 
 	public void Awake() {
 		effects = new Dictionary<string, HumanEffectInstance>();
+
+		target.onHurt.AddListener(OnDamageTaken);
 	}
 
 	public void AddEffect(HumanEffectInstance instance) {
@@ -38,12 +40,19 @@ public class HumanEffectManager : MonoBehaviour {
 	}
 
 	private void Update() {
+
+		List<string> toRemove = new List<string>();
+
 		foreach(HumanEffectInstance effect in effects.Values) {
 			effect.Update();
 
 			if (effect.IsExpired) {
-				RemoveEffect(effect.GetEffect().id);
+				toRemove.Add(effect.GetEffect().id);
 			}
+		}
+
+		foreach (string id in toRemove) {
+			RemoveEffect(id);
 		}
 	}
 
