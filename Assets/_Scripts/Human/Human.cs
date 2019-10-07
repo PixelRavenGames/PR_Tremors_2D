@@ -41,6 +41,8 @@ public class Human : MonoBehaviour, IDamageable {
 	private bool canWallJump = false;
 	private int jumpCount = 0;
 
+	private bool invulnerable = false;
+
 	private bool dashWasPressed = false;
 
 	private bool isCrouching = false;
@@ -263,7 +265,7 @@ public class Human : MonoBehaviour, IDamageable {
 
 	public void Damage(float rawDamage) {
 
-		if (!alive) return;
+		if (!alive || invulnerable) return;
 
 		if (rawDamage > 0.75f) Kill();
 		else Stun(rawDamage * 2f);
@@ -277,6 +279,14 @@ public class Human : MonoBehaviour, IDamageable {
 
 		Physics2D.IgnoreCollision(GetComponent<Collider2D>(), col, false);
 
+	}
+
+	public int GetJumpCount() {
+		return maxJumpCount;
+	}
+
+	public void SetJumpCount(int maxJumpCount) {
+		this.maxJumpCount = maxJumpCount;
 	}
 
 }
