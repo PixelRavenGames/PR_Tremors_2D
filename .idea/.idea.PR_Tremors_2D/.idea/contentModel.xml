@@ -21,13 +21,25 @@
             <e p="CloudMovement.cs" t="Include" />
             <e p="Cuttable.cs" t="Include" />
             <e p="KillTrigger.cs" t="Include" />
+            <e p="ObjectLaunchingScript.cs" t="Include" />
             <e p="ParticleSplatter.cs" t="Include" />
+            <e p="PowerUp.cs" t="Include" />
             <e p="ShowInside.cs" t="Include" />
           </e>
           <e p="Human" t="Include">
             <e p="BotHumanController.cs" t="Include" />
             <e p="BotSettings.cs" t="Include" />
+            <e p="Effects" t="Include">
+              <e p="BubbleShieldEffect.cs" t="Include" />
+              <e p="FasterDashEffect.cs" t="Include" />
+              <e p="HumanEffect.cs" t="Include" />
+              <e p="HumanEffectInstance.cs" t="Include" />
+              <e p="HumanEffectManager.cs" t="Include" />
+              <e p="MultiJumpEffect.cs" t="Include" />
+              <e p="SpawnObjectEffect.cs" t="Include" />
+            </e>
             <e p="Human.cs" t="Include" />
+            <e p="HumanSpriteSelection.cs" t="Include" />
             <e p="IHumanController.cs" t="Include" />
             <e p="PlayerHumanController.cs" t="Include" />
           </e>
@@ -40,11 +52,19 @@
           </e>
           <e p="MeteorManager.cs" t="Include" />
           <e p="PlayerManager.cs" t="Include" />
+          <e p="ScoreManager.cs" t="Include" />
+          <e p="TMP_EndScript.cs" t="Include" />
           <e p="UI" t="Include">
+            <e p="CharacterSelection.cs" t="Include" />
             <e p="Humans" t="Include">
               <e p="PlayerIndicator.cs" t="Include" />
               <e p="StunIndicator.cs" t="Include" />
             </e>
+            <e p="Navigation" t="Include">
+              <e p="ControllerNavigation.cs" t="Include" />
+              <e p="NavigationByNumber.cs" t="Include" />
+            </e>
+            <e p="ReadyCheck.cs" t="Include" />
           </e>
           <e p="Utility" t="Include">
             <e p="Cutter.cs" t="Include" />
