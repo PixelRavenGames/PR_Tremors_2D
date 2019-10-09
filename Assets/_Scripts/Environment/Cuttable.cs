@@ -36,9 +36,13 @@ public class Cuttable : MonoBehaviour
     private void InitializeMask()
     {
         lastClippingZ += 0.1f;
-
+        cullMesh = new Mesh();
+        
         var sr = GetComponent<SpriteRenderer>();
+        if (!sr) return;
+        
         var sprite = sr.sprite;
+
         var width = sprite.texture.width;
         var height = sprite.texture.height;
         if (sr.drawMode == SpriteDrawMode.Tiled)
@@ -46,9 +50,10 @@ public class Cuttable : MonoBehaviour
             width = (int) (width * sr.size.x);
             height = (int) (height * sr.size.y);
         }
+
         var rt = new RenderTexture(width, height, 16, RenderTextureFormat.ARGB32);
         rt.Create();
-        
+            
         var newcamera = new GameObject("Culling Camera");
         newcamera.transform.parent = transform;
         newcamera.transform.localPosition = new Vector3(0, 0, lastClippingZ);
@@ -60,16 +65,14 @@ public class Cuttable : MonoBehaviour
         cullCamera.targetTexture = rt;
         cullCamera.backgroundColor = Color.black;
         cullCamera.cullingMask = 1 << LayerMask.NameToLayer("Clipping");
-
-        cullMesh = new Mesh();
-        
+            
         var clippingmask = new GameObject("Clipping Mask") {layer = LayerMask.NameToLayer("Clipping")};
         clippingmask.transform.parent = transform;
         clippingmask.transform.localPosition = new Vector3(0, 0, lastClippingZ + 0.05f);
         clippingmask.layer = LayerMask.NameToLayer("Clipping");
         clippingmask.AddComponent<MeshRenderer>();
         clippingmask.AddComponent<MeshFilter>().mesh = cullMesh;
-        
-        GetComponent<SpriteRenderer>().material.SetTexture("_Mask", rt);
+            
+        sr.material.SetTexture("_Mask", rt);
     }
 }

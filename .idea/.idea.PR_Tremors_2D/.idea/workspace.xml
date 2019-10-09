@@ -4,7 +4,14 @@
     <list default="true" id="3615de77-0cc7-46cc-8384-cbe2f709a430" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PR_Tremors_2D/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PR_Tremors_2D/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PR_Tremors_2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PR_Tremors_2D/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Level/Buildings/BuildingFacade1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Level/Buildings/BuildingFacade1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Meteor/Meteor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Meteor/Meteor.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/KyleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/KyleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Environment/Cuttable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Environment/Cuttable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Meteor/Meteor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Meteor/Meteor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/ScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/ScoreManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +38,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Interfaces/IDamageable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/UI/Navigation/ControllerNavigation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Environment/ShowInside.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/UI/Humans/PlayerIndicator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Environment/Cuttable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Environment/ParticleSplatter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Worm/PlayerWormController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -43,17 +51,17 @@
         <option value="$PROJECT_DIR$/Assets/_Scripts/Human/Human.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/Worm/Cutter.cs" />
         <option value="$PROJECT_DIR$/Assets/Meteor.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Scripts/Environment/Cuttable.cs" />
         <option value="$PROJECT_DIR$/Assets/Explosion.cs" />
         <option value="$PROJECT_DIR$/Assets/MeteorManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Shaders/ScreenspaceMaskedTexture.shader" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/MeteorManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Shaders/MaskedTexture.shader" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/Meteor/Explosion.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Scripts/Meteor/Meteor.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/Environment/ParticleSplatter.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/Utility/ParticleSystemAutoDestroy.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/ScoreManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/Meteor/Meteor.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/Environment/Cuttable.cs" />
       </list>
     </option>
   </component>
@@ -105,7 +113,7 @@
       <workItem from="1569535449056" duration="598000" />
       <workItem from="1569729964857" duration="11279000" />
       <workItem from="1570035027608" duration="5366000" />
-      <workItem from="1570635610957" duration="2461000" />
+      <workItem from="1570635610957" duration="5173000" />
     </task>
     <servers />
   </component>
@@ -137,6 +145,19 @@
           <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/_Scripts/Environment/Cuttable.cs</url>
+          <line>41</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/_Scripts/Environment/Cuttable.cs" initialLine="41">
+            <startOffsets>
+              <option value="1105" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1109" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
