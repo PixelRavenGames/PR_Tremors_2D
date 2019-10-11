@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/_Scenes/Menu/LobbyMenuScene.unity
     guid: bb2245c33e17afc4f814811d1854f150
   - enabled: 1
-    path: Assets/_Scenes/Sprints/Sprint2 10 6 2019.unity
-    guid: cb64fc3d62deac84094c59a385e639fd
+    path: Assets/_Scenes/JosephScene.unity
+    guid: 9877beed8da33e44895755d84e01d17f
   m_configObjects: {}
