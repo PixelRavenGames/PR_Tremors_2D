@@ -69,7 +69,9 @@ public class CharacterSelection : MonoBehaviour {
 	}
 
 	private bool JoystickExists(int joystick) {
+		joystick -= 1;
 		string[] joysticks = Input.GetJoystickNames();
+		Debug.Log(joystick < joysticks.Length && !string.IsNullOrEmpty(joysticks[joystick]));
 		return joystick < joysticks.Length && !string.IsNullOrEmpty(joysticks[joystick]);
 	}
 
