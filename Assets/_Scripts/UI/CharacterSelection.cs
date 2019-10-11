@@ -12,9 +12,16 @@ public class CharacterSelection : MonoBehaviour {
 	private int index;
 	private bool male;
 
+	private bool lateStartRan = false;
+
 	void Start() {
 		index = 0;
 		male = true;
+
+		if (!JoystickExists(controllerNumber)) {
+			male = Random.Range(0, 2) == 0;
+			Randomize();
+		}
 
 		UpdateChange();
 	}
@@ -55,6 +62,15 @@ public class CharacterSelection : MonoBehaviour {
 
 	private void UpdateChange() {
 		preview.sprite = sprites.GetSprite(male, index);
+
+		PlayerPrefs.SetInt($"PLAYER{controllerNumber}_SPRITE_INDEX", index);
+		PlayerPrefs.SetInt($"PLAYER{controllerNumber}_SPRITE_GENDER", male ? 1 : 0);
+
+	}
+
+	private bool JoystickExists(int joystick) {
+		string[] joysticks = Input.GetJoystickNames();
+		return joystick < joysticks.Length && !string.IsNullOrEmpty(joysticks[joystick]);
 	}
 
 }

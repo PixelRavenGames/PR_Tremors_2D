@@ -29,7 +29,7 @@ public class ReadyCheck : MonoBehaviour {
 		string[] joysticks = Input.GetJoystickNames();
 
 		for (int i = 0; i < playerNumber; i++) {
-			if (!ready[i] && (Input.GetAxis($"Joystick{i + 1}button{buttonIndex}") > 0 || !JoystickExists(joysticks, i))) {
+			if (!ready[i] && (Input.GetKeyDown($"joystick {i + 1} button {buttonIndex}") || !JoystickExists(joysticks, i))) {
 				onNewReady.Invoke(i + 1);
 				Debug.Log($"READY PLAYER {i + 1}");
 				ready[i] = true;

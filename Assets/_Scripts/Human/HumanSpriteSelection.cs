@@ -6,11 +6,16 @@ using UnityEngine;
 public class HumanSpriteSelection : ScriptableObject {
 
 	[SerializeField]
-	private Sprite[] male;
+	private HumanSpriteSet[] male;
 	[SerializeField]
-	private Sprite[] female;
+	private HumanSpriteSet[] female;
 
-	public Sprite GetSprite(bool maleFlg, int index) {
+	public Sprite GetSprite(bool maleFlg, int index, bool crouching = false) {
+		HumanSpriteSet set = GetSpriteSet(maleFlg, index);
+		return (crouching ? set.crouching : set.main);
+	}
+
+	public HumanSpriteSet GetSpriteSet(bool maleFlg, int index) {
 		return maleFlg ? male[index] : female[index];
 	}
 
@@ -18,4 +23,10 @@ public class HumanSpriteSelection : ScriptableObject {
 		return maleFlg ? male.Length : female.Length;
 	}
 
+}
+
+[System.Serializable]
+public class HumanSpriteSet {
+	public Sprite main;
+	public Sprite crouching;
 }

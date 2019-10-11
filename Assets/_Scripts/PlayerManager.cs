@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerManager : MonoBehaviour {
 
@@ -9,12 +10,15 @@ public class PlayerManager : MonoBehaviour {
 	public BotSettings botSettings;
 
 	public Human[] humans;
-	// TODO WORM
+
+	public PlayerWinEvent onPlayerWin = new PlayerWinEvent();
 
 	private string[] previousJoysticks = null;
 
 	private MeteorManager meteorManager;
 	private Cinemachine.CinemachineTargetGroup targetGroup;
+
+	private bool winEventConsumed = false;
 
 	private void Awake() {
 		if (instance == null) {
@@ -48,6 +52,12 @@ public class PlayerManager : MonoBehaviour {
 				humans[i].ChangeController(new BotHumanController(controller, humans[i], botSettings));
 			}
 
+		}
+
+		if (GetNumberOfHumans() <= 1) {
+			int[] remaining = GetRemainingPlayers();
+			onPlayerWin.Invoke(remaining.Length > 0 ? remaining[0] : -1);
+			winEventConsumed = true;
 		}
 
 		previousJoysticks = joysticks;
@@ -92,7 +102,6 @@ public class PlayerManager : MonoBehaviour {
 	public Vector2[] GetPlayerPositions() {
 		List<Vector2> ret = new List<Vector2>();
 
-		// TODO ret.Add(WORM);
 		for (int i = 0; i < humans.Length; i++) {
 			ret.Add(humans[i].transform.position);
 		}
@@ -102,3 +111,6 @@ public class PlayerManager : MonoBehaviour {
 	}
 
 }
+
+[System.Serializable]
+public class PlayerWinEvent : UnityEvent<int> {}

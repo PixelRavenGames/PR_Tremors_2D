@@ -611,6 +611,11 @@ PrefabInstance:
       propertyPath: m_Navigation.m_SelectOnDown
       value: 
       objectReference: {fileID: 1791723044}
+    - target: {fileID: 7584813583368719594, guid: 3c6af9580c47e694f8aa63841f0c1294,
+        type: 3}
+      propertyPath: controllerNumber
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c6af9580c47e694f8aa63841f0c1294, type: 3}
 --- !u!224 &410391122 stripped
@@ -785,6 +790,11 @@ PrefabInstance:
       propertyPath: m_Navigation.m_SelectOnDown
       value: 
       objectReference: {fileID: 1791723044}
+    - target: {fileID: 7584813583368719594, guid: 3c6af9580c47e694f8aa63841f0c1294,
+        type: 3}
+      propertyPath: controllerNumber
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c6af9580c47e694f8aa63841f0c1294, type: 3}
 --- !u!224 &504728702 stripped
@@ -959,6 +969,11 @@ PrefabInstance:
       propertyPath: m_Navigation.m_SelectOnDown
       value: 
       objectReference: {fileID: 1791723044}
+    - target: {fileID: 7584813583368719594, guid: 3c6af9580c47e694f8aa63841f0c1294,
+        type: 3}
+      propertyPath: controllerNumber
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c6af9580c47e694f8aa63841f0c1294, type: 3}
 --- !u!224 &638231974 stripped
@@ -1309,6 +1324,11 @@ PrefabInstance:
       propertyPath: m_Navigation.m_SelectOnDown
       value: 
       objectReference: {fileID: 1791723044}
+    - target: {fileID: 7584813583368719594, guid: 3c6af9580c47e694f8aa63841f0c1294,
+        type: 3}
+      propertyPath: controllerNumber
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c6af9580c47e694f8aa63841f0c1294, type: 3}
 --- !u!224 &931553842 stripped
@@ -1488,6 +1508,11 @@ PrefabInstance:
       propertyPath: m_Navigation.m_SelectOnDown
       value: 
       objectReference: {fileID: 1791723044}
+    - target: {fileID: 7584813583368719594, guid: 3c6af9580c47e694f8aa63841f0c1294,
+        type: 3}
+      propertyPath: controllerNumber
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c6af9580c47e694f8aa63841f0c1294, type: 3}
 --- !u!224 &958269640 stripped
@@ -1532,6 +1557,49 @@ MonoBehaviour:
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &977255395
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 977255397}
+  - component: {fileID: 977255396}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &977255396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977255395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ca18b734e6ff44b83614263dabc6ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &977255397
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977255395}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 371.92346, y: 210.38254, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1045023582
 GameObject:
   m_ObjectHideFlags: 0
@@ -1749,6 +1817,11 @@ PrefabInstance:
       propertyPath: m_Navigation.m_SelectOnDown
       value: 
       objectReference: {fileID: 1791723044}
+    - target: {fileID: 7584813583368719594, guid: 3c6af9580c47e694f8aa63841f0c1294,
+        type: 3}
+      propertyPath: controllerNumber
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c6af9580c47e694f8aa63841f0c1294, type: 3}
 --- !u!224 &1196107313 stripped
@@ -1871,14 +1944,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bede496bec6e5e7478579e18cb8c1806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonIndex: 0
+  buttonIndex: 1
   playerNumber: 8
   onNewReady:
     m_PersistentCalls:
       m_Calls: []
   onReady:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 977255396}
+        m_MethodName: LoadScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1261162668
 GameObject:
   m_ObjectHideFlags: 0
@@ -2573,6 +2657,11 @@ PrefabInstance:
       propertyPath: m_Navigation.m_SelectOnDown
       value: 
       objectReference: {fileID: 1791723044}
+    - target: {fileID: 7584813583368719594, guid: 3c6af9580c47e694f8aa63841f0c1294,
+        type: 3}
+      propertyPath: controllerNumber
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c6af9580c47e694f8aa63841f0c1294, type: 3}
 --- !u!224 &1912667257 stripped

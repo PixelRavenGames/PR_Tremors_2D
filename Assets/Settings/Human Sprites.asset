@@ -13,16 +13,28 @@ MonoBehaviour:
   m_Name: Human Sprites
   m_EditorClassIdentifier: 
   male:
-  - {fileID: 21300000, guid: 6a408a14030827f44ab37445a21d6337, type: 3}
-  - {fileID: 21300000, guid: 1d26eef6081c2d544b35adc427cb84a4, type: 3}
-  - {fileID: 21300000, guid: 5eafb26654c31b44492f14dc632b02f9, type: 3}
-  - {fileID: 21300000, guid: e8ee45056fcbe364a9e44b8d88fbf30b, type: 3}
-  - {fileID: 21300000, guid: a16f118eee470904d9e50e5a2d60e205, type: 3}
-  - {fileID: 21300000, guid: 9bcc5fdf399f4ef47b0914cfc1e918d9, type: 3}
-  - {fileID: 21300000, guid: 0cf597c5d92163241910022b13e42f8d, type: 3}
-  - {fileID: 21300000, guid: 13eac1c1dcd710a4a805fb1076d7410a, type: 3}
-  - {fileID: 21300000, guid: 95f5c0c38b2226144a4511d498528bff, type: 3}
+  - main: {fileID: 21300000, guid: 6a408a14030827f44ab37445a21d6337, type: 3}
+    crouching: {fileID: 21300000, guid: 2d959abbef6e36b4c93a166bf5a0ec91, type: 3}
+  - main: {fileID: 21300000, guid: 1d26eef6081c2d544b35adc427cb84a4, type: 3}
+    crouching: {fileID: 21300000, guid: 1d26eef6081c2d544b35adc427cb84a4, type: 3}
+  - main: {fileID: 21300000, guid: 5eafb26654c31b44492f14dc632b02f9, type: 3}
+    crouching: {fileID: 21300000, guid: 5eafb26654c31b44492f14dc632b02f9, type: 3}
+  - main: {fileID: 21300000, guid: e8ee45056fcbe364a9e44b8d88fbf30b, type: 3}
+    crouching: {fileID: 21300000, guid: e4652a4c5773c9745a303ac2d39b990b, type: 3}
+  - main: {fileID: 21300000, guid: a16f118eee470904d9e50e5a2d60e205, type: 3}
+    crouching: {fileID: 21300000, guid: 5ffed59063fbc2f41b0ccdc64e38032e, type: 3}
+  - main: {fileID: 21300000, guid: 9bcc5fdf399f4ef47b0914cfc1e918d9, type: 3}
+    crouching: {fileID: 21300000, guid: fa5d3cb3090dc8843af164301f891ecf, type: 3}
+  - main: {fileID: 21300000, guid: 0cf597c5d92163241910022b13e42f8d, type: 3}
+    crouching: {fileID: 21300000, guid: aba1b51f29187354185e03d1910a02a3, type: 3}
+  - main: {fileID: 21300000, guid: 13eac1c1dcd710a4a805fb1076d7410a, type: 3}
+    crouching: {fileID: 21300000, guid: 13eac1c1dcd710a4a805fb1076d7410a, type: 3}
+  - main: {fileID: 21300000, guid: 95f5c0c38b2226144a4511d498528bff, type: 3}
+    crouching: {fileID: 21300000, guid: 45bbd7765023be54eaff3f1febc41c13, type: 3}
   female:
-  - {fileID: 21300000, guid: d808f5b09d52592458d848db264e95a7, type: 3}
-  - {fileID: 21300000, guid: a4a1575ef2ffdc8418bd60dac37c2895, type: 3}
-  - {fileID: 21300000, guid: 9ec1a2c90cf2aaf4c88074f8cb008127, type: 3}
+  - main: {fileID: 21300000, guid: d808f5b09d52592458d848db264e95a7, type: 3}
+    crouching: {fileID: 21300000, guid: 94aac10a13d705d469469ac996c22033, type: 3}
+  - main: {fileID: 21300000, guid: a4a1575ef2ffdc8418bd60dac37c2895, type: 3}
+    crouching: {fileID: 21300000, guid: e9c65dc6947756846989b771c542687c, type: 3}
+  - main: {fileID: 21300000, guid: 9ec1a2c90cf2aaf4c88074f8cb008127, type: 3}
+    crouching: {fileID: 21300000, guid: 98415e3ed9e3b7d4cb70d829e09e0133, type: 3}
