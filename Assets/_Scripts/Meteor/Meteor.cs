@@ -74,28 +74,19 @@ public class Meteor : MonoBehaviour
         
         cutter.CutRadius = explosionRadius;
         cutter.Cut();
-        
-        Destroy(gameObject);
 
         var explosion = Instantiate(explosionPrefab);
         explosion.transform.position = transform.position;
         explosion.Explode(explosionRadius);
         
-        var meteor_asc = explosion.GetComponent<AudioSource>();
-        if (meteor_asc)
-        {
-            meteor_asc.PlayOneShot(explosionSounds[Random.Range(0, explosionSounds.Length)]);
-        }
+        AudioSource.PlayClipAtPoint(explosionSounds[Random.Range(0, explosionSounds.Length)], explosion.transform.position);
+        
+        Destroy(gameObject);
     }
 
     private void Update()
     {
         rb.MovePosition(rb.position + (meteorVelocity * Time.deltaTime));
-        /*var rot = transform.rotation;
-        var eulerAngles = rot.eulerAngles;
-        eulerAngles.z = Mathf.Rad2Deg * (Mathf.Atan2(meteorVelocity.y, meteorVelocity.x));
-        rot.eulerAngles = eulerAngles;
-        transform.rotation = rot;*/
         
         var angle = Mathf.Atan2(meteorVelocity.y, meteorVelocity.x) * Mathf.Rad2Deg + 90f;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);

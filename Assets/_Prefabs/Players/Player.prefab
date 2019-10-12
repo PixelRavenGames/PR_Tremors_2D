@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8217749804914809568}
   - component: {fileID: 8217749804914809569}
   - component: {fileID: 8217749804914809582}
+  - component: {fileID: 8017686742177109124}
   - component: {fileID: 8217749804914809583}
   - component: {fileID: 8217749804914809580}
   - component: {fileID: 4263039191786158778}
@@ -98,17 +99,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controllerNum: 0
+  maxJumpCount: 2
   jumpHeight: 1
   fallModifier: 2.5
-  speed: 1
-  dashSpeed: 20
+  speed: 4
+  dashSpeed: 40
   dashCooldown: 1
   indicator: {fileID: 3384962681002845633}
   stunIndicator: {fileID: 5464119763650454104}
   deathEffect: {fileID: 4405086832756664867, guid: ce14bcee0c86f2648b36ec0d573183f2,
     type: 3}
-  defaultSprite: {fileID: 0}
-  crouchSprite: {fileID: 0}
+  spritesReference: {fileID: 11400000, guid: 96e469ab390d0434b96812fc1a26d382, type: 2}
+--- !u!114 &8017686742177109124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8217749804914809581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de76baf452c019c4e9a85667f9f1ebed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 8217749804914809582}
 --- !u!50 &8217749804914809583
 Rigidbody2D:
   serializedVersion: 4

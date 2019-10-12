@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5420472990288103157}
   - component: {fileID: 5420472990288103156}
   - component: {fileID: 4992131683501546850}
+  - component: {fileID: 5096102685942215122}
   m_Layer: 9
   m_Name: TrashCan
   m_TagString: Untagged
@@ -128,3 +129,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.10936761, y: 0.10802199}
   m_EdgeRadius: 0
+--- !u!114 &5096102685942215122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5420472990288103152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2586ce13ee8729a428f3c5e37037ab35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionForce: 8
+  damageThreshold: 0.75
