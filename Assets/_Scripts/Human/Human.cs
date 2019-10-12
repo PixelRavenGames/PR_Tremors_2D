@@ -32,8 +32,7 @@ public class Human : MonoBehaviour, IDamageable {
 	public GameObject deathEffect;
 
 	[Header("Sprites")]
-	public Sprite defaultSprite;
-	public Sprite crouchSprite;
+	public HumanSpriteSelection spritesReference;
 
 	[Header("Events")]
 	public OnHurtEvent onHurt = new OnHurtEvent();
@@ -81,6 +80,9 @@ public class Human : MonoBehaviour, IDamageable {
 
 	// Cooldown for dash
 	private float dashTimer = 0;
+
+	// Sprite Set For Player
+	private HumanSpriteSet sprite;
 	#endregion
 
 	#region Unity Events
@@ -91,7 +93,11 @@ public class Human : MonoBehaviour, IDamageable {
 		tr = GetComponent<TrailRenderer>();
 
 		// Set the Sprite
-		sr.sprite = defaultSprite;
+		int offset = PlayerPrefs.GetInt($"PLAYER{controllerNum}_SPRITE_INDEX", 1);
+		bool gender = PlayerPrefs.GetInt($"PLAYER{controllerNum}_SPRITE_GENDER", 1) == 1;
+		sprite = spritesReference.GetSpriteSet(gender, offset);
+
+		sr.sprite = sprite.main;
 
 		// Disable Trail
 		tr.emitting = false;
@@ -340,8 +346,8 @@ public class Human : MonoBehaviour, IDamageable {
 		bool wasCrouching = isCrouching;
 		isCrouching = !control.ShouldMove() && control.GetCrouchButton();
 
-		if (!wasCrouching && isCrouching) sr.sprite = crouchSprite;
-		if (wasCrouching && !isCrouching) sr.sprite = defaultSprite;
+		if (!wasCrouching && isCrouching) sr.sprite = sprite.crouching;
+		if (wasCrouching && !isCrouching) sr.sprite = sprite.main;
 	}
 
 	private void UpdateJumping() {
