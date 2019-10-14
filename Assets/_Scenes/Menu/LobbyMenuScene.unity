@@ -604,7 +604,7 @@ PrefabInstance:
     - target: {fileID: 7584813584103337692, guid: 3c6af9580c47e694f8aa63841f0c1294,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.16085815
+      value: -0.16085052
       objectReference: {fileID: 0}
     - target: {fileID: 7584813583316193348, guid: 3c6af9580c47e694f8aa63841f0c1294,
         type: 3}
@@ -1501,7 +1501,7 @@ PrefabInstance:
     - target: {fileID: 7584813584103337692, guid: 3c6af9580c47e694f8aa63841f0c1294,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.16085815
+      value: -0.16085052
       objectReference: {fileID: 0}
     - target: {fileID: 7584813583316193348, guid: 3c6af9580c47e694f8aa63841f0c1294,
         type: 3}
@@ -1944,7 +1944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bede496bec6e5e7478579e18cb8c1806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonIndex: 0
+  buttonIndex: 7
   playerNumber: 8
   onNewReady:
     m_PersistentCalls:
