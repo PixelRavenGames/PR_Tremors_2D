@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,7 +40,7 @@ public class ScoreManager : MonoBehaviour
         }
 
         var sorted = scores.Select((x, i) => new KeyValuePair<int, float>(i, x))
-            .OrderBy(x => x.Key);
+            .OrderBy(x => x.Value).Reverse();
 
         scoreOrder = sorted.Select(x => x.Key).ToArray();
 
