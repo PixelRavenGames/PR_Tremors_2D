@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: Assets/_Scenes/Menu/LobbyMenuScene.unity
     guid: bb2245c33e17afc4f814811d1854f150
   - enabled: 1
-    path: Assets/_Scenes/JosephScene.unity
-    guid: 9877beed8da33e44895755d84e01d17f
+    path: Assets/_Scenes/Sprints/Sprint3 10 13 2019.unity
+    guid: 17f4522ecec523c469235c08f122d8da
   - enabled: 1
     path: Assets/_Scenes/Menu/WinScene.unity
     guid: fff3cbc8458c94244b80e54458076ef8

@@ -36,6 +36,7 @@ public class Human : MonoBehaviour, IDamageable {
 
 	[Header("Events")]
 	public OnHurtEvent onHurt = new OnHurtEvent();
+	public OnDeathEvent onDeath = new OnDeathEvent();
 	#endregion
 
 	#region Private Variables
@@ -266,6 +267,8 @@ public class Human : MonoBehaviour, IDamageable {
 	public void Kill() {
 		// If already dead, stop
 		if (!alive) return;
+		// Run Death Event
+		onDeath.Invoke();
 		// Set Alive Flag
 		alive = false;
 
@@ -295,9 +298,21 @@ public class Human : MonoBehaviour, IDamageable {
 	}
 
 	public bool DropThrough() {
-		RaycastHit2D hit = Physics2D.Raycast((Vector2) transform.position + new Vector2(0, -0.17f), Vector2.down, 0.5f);
+		bool ret = false;
 
-		if (hit && hit.collider.GetComponent<PlatformEffector2D>()) {
+		if (DropThrough(Vector2.zero)) ret = true;
+
+		return ret;
+	}
+
+	public bool DropThrough(Vector2 offset) {
+		RaycastHit2D hit = Physics2D.Raycast((Vector2) transform.position + offset + new Vector2(0, -0.17f), Vector2.down, 0.5f);
+
+		Debug.DrawLine((Vector2) transform.position + offset + new Vector2(0, -0.1f), (Vector2) transform.position + offset + new Vector2(0, -0.17f) + (Vector2.down * 0.5f), Color.white);
+
+		if (hit && hit.collider) Debug.Log(hit.collider.name);
+
+		if (hit && hit.collider && hit.collider.GetComponent<PlatformEffector2D>()) {
 			canJump = false;
 			StartCoroutine(FullDropThrough(hit.collider));
 			return true;
@@ -422,5 +437,9 @@ public class Human : MonoBehaviour, IDamageable {
 }
 
 #region Events
+[System.Serializable]
 public class OnHurtEvent : UnityEvent<float> {}
+
+[System.Serializable]
+public class OnDeathEvent : UnityEvent { }
 #endregion
