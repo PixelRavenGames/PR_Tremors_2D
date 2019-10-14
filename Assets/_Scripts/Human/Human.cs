@@ -165,7 +165,7 @@ public class Human : MonoBehaviour, IDamageable {
 				canJump = true;
 			} else {
 				// If this isn't a jump-through platform
-				if (!collision.collider.GetComponent<PlatformEffector2D>()) {
+				if (!collision.collider.GetComponent<PlatformEffector2D>() && collision.collider.gameObject.layer != 12) {
 					// Check direction and set wall detection
 					if (point.x < -0.07f) { attachedToWall = WallSide.LEFT; }
 					if (point.x > 0.07f) { attachedToWall = WallSide.RIGHT; }
