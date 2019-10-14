@@ -16,20 +16,28 @@ public class ReadyCheck : MonoBehaviour {
 	public OnReady onReady = new OnReady();
 
 	private bool[] ready;
+	private bool[] connected;
 	private bool needReady = true;
 
 	void Start() {
 		ready = new bool[playerNumber];
+		connected = new bool[playerNumber];
 	}
 
 	void Update() {
 		if (!needReady) return;
 
-
 		string[] joysticks = Input.GetJoystickNames();
 
+		bool[] newConnected = new bool[playerNumber];
 		for (int i = 0; i < playerNumber; i++) {
-			if (!ready[i] && (Input.GetKeyDown($"joystick {i + 1} button {buttonIndex}") || !JoystickExists(joysticks, i))) {
+			newConnected[i] = JoystickExists(joysticks, i);
+		}
+
+		for (int i = 0; i < playerNumber; i++) {
+			if (newConnected[i] && !connected[i]) ready[i] = false;
+
+			if (!ready[i] && (Input.GetKeyDown($"joystick {i + 1} button {buttonIndex}") || !newConnected[i])) {
 				onNewReady.Invoke(i + 1);
 				Debug.Log($"READY PLAYER {i + 1}");
 				ready[i] = true;

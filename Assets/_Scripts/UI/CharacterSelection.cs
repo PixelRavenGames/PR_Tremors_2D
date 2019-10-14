@@ -9,6 +9,8 @@ public class CharacterSelection : MonoBehaviour {
 	public Image preview;
 	public HumanSpriteSelection sprites;
 
+	public Image background;
+
 	private int index;
 	private bool male;
 
@@ -73,6 +75,14 @@ public class CharacterSelection : MonoBehaviour {
 		string[] joysticks = Input.GetJoystickNames();
 		Debug.Log(joystick < joysticks.Length && !string.IsNullOrEmpty(joysticks[joystick]));
 		return joystick < joysticks.Length && !string.IsNullOrEmpty(joysticks[joystick]);
+	}
+
+	public void OnReady(int controller) {
+		if (controller == controllerNumber) OnReady();
+	}
+
+	private void OnReady() {
+		background.color = new Color(background.color.r - 0.1f, background.color.g - 0.1f, background.color.b - 0.1f);
 	}
 
 }
