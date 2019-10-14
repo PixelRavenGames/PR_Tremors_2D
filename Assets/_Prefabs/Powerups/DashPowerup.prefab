@@ -24,7 +24,7 @@ PrefabInstance:
     - target: {fileID: 5469645128228120707, guid: 6d3ba5392742db5498997f2b53537705,
         type: 3}
       propertyPath: m_Name
-      value: DashPowerup (1)
+      value: DashPowerup
       objectReference: {fileID: 0}
     - target: {fileID: 5469645128228120711, guid: 6d3ba5392742db5498997f2b53537705,
         type: 3}
@@ -87,6 +87,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 9730582d790a1db479929d2230f1e290,
         type: 3}
+    - target: {fileID: 5469645128228120710, guid: 6d3ba5392742db5498997f2b53537705,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5469645128228120709, guid: 6d3ba5392742db5498997f2b53537705,
         type: 3}
       propertyPath: effect
