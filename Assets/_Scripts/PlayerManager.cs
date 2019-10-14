@@ -29,7 +29,13 @@ public class PlayerManager : MonoBehaviour {
 			meteorManager = FindObjectOfType<MeteorManager>();
 			targetGroup = FindObjectOfType<Cinemachine.CinemachineTargetGroup>();
 
-			foreach (Human human in humans) targetGroup.AddMember(human.transform, 1, 2);
+			foreach (Human human in humans) {
+				human.onDeath.AddListener(new UnityAction(() => {
+					targetGroup.RemoveMember(human.transform);
+				}));
+
+				targetGroup.AddMember(human.transform, 1, 2);
+			}
 		}
 	}
 

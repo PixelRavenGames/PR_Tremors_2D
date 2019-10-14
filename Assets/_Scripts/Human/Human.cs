@@ -165,7 +165,7 @@ public class Human : MonoBehaviour, IDamageable {
 				canJump = true;
 			} else {
 				// If this isn't a jump-through platform
-				if (!collision.collider.GetComponent<PlatformEffector2D>()) {
+				if (!collision.collider.GetComponent<PlatformEffector2D>() && collision.collider.gameObject.layer != 12) {
 					// Check direction and set wall detection
 					if (point.x < -0.07f) { attachedToWall = WallSide.LEFT; }
 					if (point.x > 0.07f) { attachedToWall = WallSide.RIGHT; }
@@ -280,13 +280,15 @@ public class Human : MonoBehaviour, IDamageable {
 		// Create Partcles, Schedule Destruction
 		Destroy(Instantiate(deathEffect, transform.position, Quaternion.identity), 5);
 
-		// Stun for 2 Seconds
-		Stun(2, 0);
-		// Move into the air
-		transform.position += (Vector3) Vector2.up * 5f;
+		Destroy(gameObject);
 
-		// Set to ghost colour;
-		GetComponent<SpriteRenderer>().color = new Color(0.5f, 0.75f, 1f, 0.5f);
+		//// Stun for 2 Seconds
+		//Stun(2, 0);
+		//// Move into the air
+		//transform.position += (Vector3) Vector2.up * 5f;
+		//
+		//// Set to ghost colour;
+		//GetComponent<SpriteRenderer>().color = new Color(0.5f, 0.75f, 1f, 0.5f);
 	}
 
 	public void Stun(float time, float random = 0.1f) {
