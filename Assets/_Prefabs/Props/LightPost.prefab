@@ -143,3 +143,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionForce: 8
   damageThreshold: 0.75
+  particleEffectOnHit: 1
+  particles:
+    oneTimeOnly: 1
+    particles:
+    - particles: {fileID: 7889024515154928233, guid: b59a07a90b1acc14b85dfba28522c25e,
+        type: 3}
+      offset: {x: 0, y: 0.241}

@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class ObjectLaunchingScript : MonoBehaviour, IDamageable {
 
+	[Header("Settings")]
 	public float explosionForce = 8;
 	public float damageThreshold = 0.75f;
+	[Header("Particles")]
+	public bool particleEffectOnHit = false;
+	[ConditionalHide("particleEffectOnHit", true, false)]
+	public PropParticlesContainer particles;
+	
 	Rigidbody2D rb;
 
 	private void Start() {
@@ -21,6 +27,41 @@ public class ObjectLaunchingScript : MonoBehaviour, IDamageable {
 	}
 
 	public void Damage(float rawDamage) {
-		if (rawDamage > damageThreshold) rb.velocity = Vector2.up * explosionForce;
+		if (rawDamage > damageThreshold) {
+			rb.velocity = Vector2.up * explosionForce;
+			if (particleEffectOnHit) particles.PlayParticles(transform);
+		}
+	}
+}
+
+[System.Serializable]
+public class PropParticlesContainer {
+	public bool oneTimeOnly = true;
+	public PropParticles[] particles;
+
+	private bool consumed = false;
+
+	public void PlayParticles(Transform transform) {
+		if (!consumed) {
+			foreach (PropParticles p in particles) {
+				p.PlayParticles(transform);
+			}
+
+			if (oneTimeOnly) consumed = true;
+		}
+	}
+
+}
+
+[System.Serializable]
+public class PropParticles {
+	public GameObject particles;
+	public Vector2 offset;
+
+	public void PlayParticles(Transform transform) {
+
+		Vector2 newPosition = transform.localPosition + (transform.InverseTransformVector(offset));
+
+		GameObject.Instantiate(particles, newPosition, Quaternion.identity);
 	}
 }
