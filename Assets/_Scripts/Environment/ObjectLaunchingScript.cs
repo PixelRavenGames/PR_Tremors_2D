@@ -57,12 +57,18 @@ public class PropParticlesContainer {
 public class PropParticles {
 	public GameObject particles;
 	public Vector2 offset;
+	public bool shouldParent = false;
 
 	public void PlayParticles(Transform transform) {
 
 		Vector2 newPosition = transform.localPosition + (transform.InverseTransformVector(offset));
 
-		GameObject particlesObj = GameObject.Instantiate(particles, newPosition, Quaternion.identity);
+		GameObject particlesObj = null;
+		if (shouldParent) {
+			particlesObj = GameObject.Instantiate(particles, newPosition, Quaternion.identity, transform);
+		} else {
+			particlesObj = GameObject.Instantiate(particles, newPosition, Quaternion.identity);
+		}
 		particlesObj.transform.localScale = Vector3.one * 0.3f;
 	}
 }

@@ -150,3 +150,4 @@ MonoBehaviour:
     - particles: {fileID: 54042617030835515, guid: 7635578ef257fb2449ce09716cb265a7,
         type: 3}
       offset: {x: 0, y: 0.0666}
+      shouldParent: 1
