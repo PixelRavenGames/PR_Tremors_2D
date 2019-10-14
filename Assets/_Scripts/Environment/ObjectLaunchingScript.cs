@@ -62,6 +62,7 @@ public class PropParticles {
 
 		Vector2 newPosition = transform.localPosition + (transform.InverseTransformVector(offset));
 
-		GameObject.Instantiate(particles, newPosition, Quaternion.identity);
+		GameObject particlesObj = GameObject.Instantiate(particles, newPosition, Quaternion.identity);
+		particlesObj.transform.localScale = Vector3.one * 0.3f;
 	}
 }
