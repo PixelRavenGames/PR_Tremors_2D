@@ -13,6 +13,7 @@ public class ReadyCheck : MonoBehaviour {
 
 	[Header("Events")]
 	public OnNewReady onNewReady = new OnNewReady();
+	public OnNewReady onNewUnReady = new OnNewReady();
 	public OnReady onReady = new OnReady();
 
 	private bool[] ready;
@@ -35,7 +36,10 @@ public class ReadyCheck : MonoBehaviour {
 		}
 
 		for (int i = 0; i < playerNumber; i++) {
-			if (newConnected[i] && !connected[i]) ready[i] = false;
+			if (ready[i] && (newConnected[i] && !connected[i])) {
+				ready[i] = false;
+				onNewUnReady.Invoke(i + 1);
+			}
 
 			if (!ready[i] && (Input.GetKeyDown($"joystick {i + 1} button {buttonIndex}") || !newConnected[i])) {
 				onNewReady.Invoke(i + 1);

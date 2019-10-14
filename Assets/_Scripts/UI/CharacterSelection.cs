@@ -10,6 +10,7 @@ public class CharacterSelection : MonoBehaviour {
 	public HumanSpriteSelection sprites;
 
 	public Image background;
+	public Text readyText;
 
 	private int index;
 	private bool male;
@@ -26,6 +27,8 @@ public class CharacterSelection : MonoBehaviour {
 		}
 
 		UpdateChange();
+
+		readyText.enabled = false;
 	}
 
 	public void Next() {
@@ -83,6 +86,16 @@ public class CharacterSelection : MonoBehaviour {
 
 	private void OnReady() {
 		background.color = new Color(background.color.r - 0.1f, background.color.g - 0.1f, background.color.b - 0.1f);
+		readyText.enabled = true;
+	}
+
+	public void OnUnReady(int controller) {
+		if (controller == controllerNumber) OnReady();
+	}
+
+	private void OnUnReady() {
+		background.color = new Color(background.color.r + 0.1f, background.color.g + 0.1f, background.color.b + 0.1f);
+		readyText.enabled = true;
 	}
 
 }
