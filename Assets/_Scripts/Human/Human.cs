@@ -280,13 +280,15 @@ public class Human : MonoBehaviour, IDamageable {
 		// Create Partcles, Schedule Destruction
 		Destroy(Instantiate(deathEffect, transform.position, Quaternion.identity), 5);
 
-		// Stun for 2 Seconds
-		Stun(2, 0);
-		// Move into the air
-		transform.position += (Vector3) Vector2.up * 5f;
+		Destroy(gameObject);
 
-		// Set to ghost colour;
-		GetComponent<SpriteRenderer>().color = new Color(0.5f, 0.75f, 1f, 0.5f);
+		//// Stun for 2 Seconds
+		//Stun(2, 0);
+		//// Move into the air
+		//transform.position += (Vector3) Vector2.up * 5f;
+		//
+		//// Set to ghost colour;
+		//GetComponent<SpriteRenderer>().color = new Color(0.5f, 0.75f, 1f, 0.5f);
 	}
 
 	public void Stun(float time, float random = 0.1f) {
