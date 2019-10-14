@@ -36,6 +36,7 @@ public class Human : MonoBehaviour, IDamageable {
 
 	[Header("Events")]
 	public OnHurtEvent onHurt = new OnHurtEvent();
+	public OnDeathEvent onDeath = new OnDeathEvent();
 	#endregion
 
 	#region Private Variables
@@ -266,6 +267,8 @@ public class Human : MonoBehaviour, IDamageable {
 	public void Kill() {
 		// If already dead, stop
 		if (!alive) return;
+		// Run Death Event
+		onDeath.Invoke();
 		// Set Alive Flag
 		alive = false;
 
@@ -434,5 +437,9 @@ public class Human : MonoBehaviour, IDamageable {
 }
 
 #region Events
+[System.Serializable]
 public class OnHurtEvent : UnityEvent<float> {}
+
+[System.Serializable]
+public class OnDeathEvent : UnityEvent { }
 #endregion
