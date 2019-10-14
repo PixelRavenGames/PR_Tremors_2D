@@ -25,6 +25,8 @@ public class Human : MonoBehaviour, IDamageable {
 	private float dashSpeed = 1f;
 	[SerializeField]
 	private float dashCooldown = 0.5f;
+	[SerializeField]
+	private float deathYLevel = -5.5f;
 
 	[Header("References")]
 	public PlayerIndicator indicator;
@@ -140,6 +142,9 @@ public class Human : MonoBehaviour, IDamageable {
 		attachedToWall = WallSide.NONE;
 		// Update sprite display
 		UpdateDisplay();
+
+		// If too low, die
+		if (transform.position.y < deathYLevel) Kill();
 	}
 
 	private void OnCollisionStay2D(Collision2D collision) {
