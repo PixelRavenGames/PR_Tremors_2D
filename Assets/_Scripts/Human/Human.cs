@@ -148,6 +148,9 @@ public class Human : MonoBehaviour, IDamageable {
 	}
 
 	private void OnCollisionStay2D(Collision2D collision) {
+
+		if (collision.collider.gameObject.layer != 12) return;
+
 		// Get Points of Contact
 		ContactPoint2D[] contactPoints = new ContactPoint2D[collision.contactCount];
 		collision.GetContacts(contactPoints);
@@ -165,7 +168,7 @@ public class Human : MonoBehaviour, IDamageable {
 				canJump = true;
 			} else {
 				// If this isn't a jump-through platform
-				if (!collision.collider.GetComponent<PlatformEffector2D>() && collision.collider.gameObject.layer != 12) {
+				if (!collision.collider.GetComponent<PlatformEffector2D>()) {
 					// Check direction and set wall detection
 					if (point.x < -0.07f) { attachedToWall = WallSide.LEFT; }
 					if (point.x > 0.07f) { attachedToWall = WallSide.RIGHT; }

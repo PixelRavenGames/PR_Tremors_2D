@@ -90,12 +90,12 @@ public class CharacterSelection : MonoBehaviour {
 	}
 
 	public void OnUnReady(int controller) {
-		if (controller == controllerNumber) OnReady();
+		if (controller == controllerNumber) OnUnReady();
 	}
 
 	private void OnUnReady() {
 		background.color = new Color(background.color.r + 0.1f, background.color.g + 0.1f, background.color.b + 0.1f);
-		readyText.enabled = true;
+		readyText.enabled = false;
 	}
 
 }
