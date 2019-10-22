@@ -148,7 +148,7 @@ public class Human : MonoBehaviour, IDamageable {
 
 	private void OnCollisionStay2D(Collision2D collision) {
 
-		if (collision.collider.gameObject.layer != 12) return;
+		if (collision.collider.gameObject.layer == 12) return;
 
 		// Get Points of Contact
 		ContactPoint2D[] contactPoints = new ContactPoint2D[collision.contactCount];

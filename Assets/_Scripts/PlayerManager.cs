@@ -7,6 +7,8 @@ public class PlayerManager : MonoBehaviour {
 
 	public static PlayerManager instance = null;
 
+	public bool allowPlayerControl = true;
+
 	public BotSettings botSettings;
 
 	public Human[] humans;
@@ -17,8 +19,6 @@ public class PlayerManager : MonoBehaviour {
 
 	private MeteorManager meteorManager;
 	private Cinemachine.CinemachineTargetGroup targetGroup;
-
-	private bool winEventConsumed = false;
 
 	private void Awake() {
 		if (instance == null) {
@@ -49,13 +49,14 @@ public class PlayerManager : MonoBehaviour {
 
 		for (int i = 0; i < humans.Length; i++) {
 			int controller = i + 1;
+			if (allowPlayerControl) {
+				if (!JoystickExists(previousJoysticks, i) && JoystickExists(joysticks, i)) {
+					humans[i].ChangeController(new PlayerHumanController(controller, humans[i]));
+				}
 
-			if (!JoystickExists(previousJoysticks, i) && JoystickExists(joysticks, i)) {
-				humans[i].ChangeController(new PlayerHumanController(controller, humans[i]));
-			}
-
-			if (JoystickExists(previousJoysticks, i) && !JoystickExists(joysticks, i)) {
-				humans[i].ChangeController(new BotHumanController(controller, humans[i], botSettings));
+				if (JoystickExists(previousJoysticks, i) && !JoystickExists(joysticks, i)) {
+					humans[i].ChangeController(new BotHumanController(controller, humans[i], botSettings));
+				}
 			}
 
 		}
@@ -63,7 +64,6 @@ public class PlayerManager : MonoBehaviour {
 		if (GetNumberOfHumans() <= 1) {
 			int[] remaining = GetRemainingPlayers();
 			onPlayerWin.Invoke(remaining.Length > 0 ? remaining[0] : -1);
-			winEventConsumed = true;
 		}
 
 		previousJoysticks = joysticks;
@@ -114,6 +114,10 @@ public class PlayerManager : MonoBehaviour {
 
 		return ret.ToArray();
 
+	}
+
+	public void SetPlayerToBot(int controller) {
+		humans[controller - 1].ChangeController(new BotHumanController(controller, humans[controller - 1], botSettings));
 	}
 
 }

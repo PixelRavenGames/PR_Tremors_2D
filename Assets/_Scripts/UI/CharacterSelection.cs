@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CharacterSelection : MonoBehaviour {
+public class CharacterSelection : Selectable {
 
 	public int controllerNumber;
 	public Image preview;
@@ -14,9 +14,20 @@ public class CharacterSelection : MonoBehaviour {
 
 	private int index;
 
+	private Vector2 prevInput;
+
 	private bool lateStartRan = false;
 
-	void Start() {
+	void Update() {
+		if (!lateStartRan) {
+			LateStart();
+			lateStartRan = true;
+		}
+
+		CheckInput();
+	}
+
+	private void LateStart() {
 		index = 0;
 
 		if (!JoystickExists(controllerNumber)) {
@@ -28,6 +39,7 @@ public class CharacterSelection : MonoBehaviour {
 		readyText.enabled = false;
 	}
 
+	#region Interface
 	public void Next() {
 		index++;
 		index %= sprites.GetSpriteCount();
@@ -47,6 +59,25 @@ public class CharacterSelection : MonoBehaviour {
 
 		UpdateChange();
 	}
+	#endregion
+
+
+	private void CheckInput() {
+		Vector2 input = new Vector2(Input.GetAxis($"Joystick{controllerNumber}X"), 0);
+
+		if (IsInputRight(input)) Next();
+		if (IsInputLeft(input)) Prev();
+
+		prevInput = input;
+	}
+
+	private bool IsInputLeft(Vector2 input) {
+		return (input.x < -0.5f) && !(prevInput.x < -0.5f);
+	}
+
+	private bool IsInputRight(Vector2 input) {
+		return (input.x > 0.5f) && !(prevInput.x > 0.5f);
+	}
 
 	private void UpdateChange() {
 		preview.sprite = sprites.GetSprite(index);
@@ -58,7 +89,6 @@ public class CharacterSelection : MonoBehaviour {
 	private bool JoystickExists(int joystick) {
 		joystick -= 1;
 		string[] joysticks = Input.GetJoystickNames();
-		Debug.Log(joystick < joysticks.Length && !string.IsNullOrEmpty(joysticks[joystick]));
 		return joystick < joysticks.Length && !string.IsNullOrEmpty(joysticks[joystick]);
 	}
 
