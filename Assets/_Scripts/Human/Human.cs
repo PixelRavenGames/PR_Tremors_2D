@@ -282,7 +282,8 @@ public class Human : MonoBehaviour, IDamageable {
 		// Create Partcles, Schedule Destruction
 		Destroy(Instantiate(deathEffect, transform.position, Quaternion.identity), 5);
 
-		Destroy(gameObject);
+		//Destroy(gameObject);
+		gameObject.SetActive(false);
 
 		//// Stun for 2 Seconds
 		//Stun(2, 0);
@@ -440,6 +441,10 @@ public class Human : MonoBehaviour, IDamageable {
 
 	public void SetInvulnerable(bool invulnerable) {
 		this.invulnerable = invulnerable;
+	}
+
+	public Sprite GetSprite() {
+		return sprite.main;
 	}
 	#endregion
 

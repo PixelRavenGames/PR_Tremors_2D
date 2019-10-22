@@ -60,4 +60,10 @@ public class ScoreManager : MonoBehaviour
             }
         }
     }
+
+	public float[] GetScores()
+	{
+		return scores;
+	}
+
 }
