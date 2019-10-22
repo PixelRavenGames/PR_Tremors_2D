@@ -6,21 +6,19 @@ using UnityEngine;
 public class HumanSpriteSelection : ScriptableObject {
 
 	[SerializeField]
-	private HumanSpriteSet[] male;
-	[SerializeField]
-	private HumanSpriteSet[] female;
+	private HumanSpriteSet[] sprites;
 
-	public Sprite GetSprite(bool maleFlg, int index, bool crouching = false) {
-		HumanSpriteSet set = GetSpriteSet(maleFlg, index);
+	public Sprite GetSprite(int index, bool crouching = false) {
+		HumanSpriteSet set = GetSpriteSet(index);
 		return (crouching ? set.crouching : set.main);
 	}
 
-	public HumanSpriteSet GetSpriteSet(bool maleFlg, int index) {
-		return maleFlg ? male[index] : female[index];
+	public HumanSpriteSet GetSpriteSet(int index) {
+		return sprites[index];
 	}
 
-	public int GetSpriteCount(bool maleFlg) {
-		return maleFlg ? male.Length : female.Length;
+	public int GetSpriteCount() {
+		return sprites.Length;
 	}
 
 }

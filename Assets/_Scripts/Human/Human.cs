@@ -97,8 +97,7 @@ public class Human : MonoBehaviour, IDamageable {
 
 		// Set the Sprite
 		int offset = PlayerPrefs.GetInt($"PLAYER{controllerNum}_SPRITE_INDEX", 1);
-		bool gender = PlayerPrefs.GetInt($"PLAYER{controllerNum}_SPRITE_GENDER", 1) == 1;
-		sprite = spritesReference.GetSpriteSet(gender, offset);
+		sprite = spritesReference.GetSpriteSet(offset);
 
 		sr.sprite = sprite.main;
 
