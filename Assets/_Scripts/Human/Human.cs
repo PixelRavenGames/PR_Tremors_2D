@@ -144,6 +144,17 @@ public class Human : MonoBehaviour, IDamageable {
 
 		// If too low, die
 		if (transform.position.y < deathYLevel) Kill();
+
+
+		// CHEATS
+		if (Input.GetKeyDown($"{controllerNum}")) {
+			if (IsAlive()) Kill();
+			else {
+				alive = true;
+				gameObject.SetActive(true);
+			}
+		}
+		// END CHEATS
 	}
 
 	private void OnCollisionStay2D(Collision2D collision) {

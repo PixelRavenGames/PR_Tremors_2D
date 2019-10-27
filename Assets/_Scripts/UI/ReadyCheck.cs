@@ -48,6 +48,8 @@ public class ReadyCheck : MonoBehaviour {
 			}
 		}
 
+		connected = newConnected;
+
 		bool isAllReady = true;
 		foreach (bool r in ready) if (!r) isAllReady = false;
 		if (isAllReady) { onReady.Invoke(); needReady = false; }

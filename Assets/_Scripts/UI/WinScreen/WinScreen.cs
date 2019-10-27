@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class WinScreen : MonoBehaviour {
@@ -15,6 +16,8 @@ public class WinScreen : MonoBehaviour {
 
 	public Image[] scoreWinnersImg;
 	public Text[] scoreWinnersTxt;
+
+	public Button retry;
 
 
 	[Header("Settings")]
@@ -78,6 +81,8 @@ public class WinScreen : MonoBehaviour {
 
 		Time.timeScale = 0.5f;
 		shouldShow = true;
+
+		EventSystem.current.SetSelectedGameObject(retry.gameObject);
 	}
 
 	private PlayerScore[] SortPlayerScores(ref PlayerScore[] scores) {

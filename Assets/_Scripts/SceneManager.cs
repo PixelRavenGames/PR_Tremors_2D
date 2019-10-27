@@ -14,6 +14,7 @@ public class SceneManager : MonoBehaviour {
 	};
 
 	public static void LoadSceneStatic(int scene) {
+		Time.timeScale = 1;
 		UnityEngine.SceneManagement.SceneManager.LoadScene(scene);
 	}
 

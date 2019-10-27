@@ -3230,6 +3230,10 @@ PrefabInstance:
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1513054737}
+    - target: {fileID: 616097271, guid: 81f4b126896c9e04793432b02cb5d868, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 619746970}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81f4b126896c9e04793432b02cb5d868, type: 3}
 --- !u!60 &5265139288986596642
@@ -3415,7 +3419,7 @@ PrefabInstance:
     - target: {fileID: 873679478077953689, guid: 14a7da42b4483c14dbd0c10ca79eaf2e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.80769426
+      value: 0.81604034
       objectReference: {fileID: 0}
     - target: {fileID: 873679478077953689, guid: 14a7da42b4483c14dbd0c10ca79eaf2e,
         type: 3}
@@ -3556,11 +3560,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Objective Banner
       objectReference: {fileID: 0}
-    - target: {fileID: 6007486364949567074, guid: 170c24fd61a31e246918275e03fc6b51,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6007486364949567085, guid: 170c24fd61a31e246918275e03fc6b51,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3665,26 +3664,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6007486364949567086, guid: 170c24fd61a31e246918275e03fc6b51,
-        type: 3}
-      propertyPath: rotationOverTime.m_Curve.Array.data[2].value
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 6007486364949567086, guid: 170c24fd61a31e246918275e03fc6b51,
-        type: 3}
-      propertyPath: rotationOverTime.m_Curve.Array.data[3].inSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6007486364949567086, guid: 170c24fd61a31e246918275e03fc6b51,
-        type: 3}
-      propertyPath: rotationOverTime.m_Curve.Array.data[3].outSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6007486364949567086, guid: 170c24fd61a31e246918275e03fc6b51,
-        type: 3}
-      propertyPath: rotationOverTime.m_Curve.Array.data[3].value
-      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 170c24fd61a31e246918275e03fc6b51, type: 3}
