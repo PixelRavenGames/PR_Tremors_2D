@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4243650528370007920}
   - component: {fileID: 4243650528370007921}
   - component: {fileID: 82485407499975884}
+  - component: {fileID: 7044101502135074777}
   m_Layer: 10
   m_Name: Meteor
   m_TagString: Untagged
@@ -363,6 +364,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7044101502135074777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4243650528370007918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8ce9e4bd8092c94899d3003f1be85b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possibleItems:
+  - {fileID: 4424211909757617572, guid: 56493f975fa68134296e1397385531d3, type: 3}
+  - {fileID: 2753863280618853013, guid: 2ed36107e92643c4b8c604401a796cc3, type: 3}
+  - {fileID: 5891839488686839645, guid: 998263ce491113944b0618b47405adbf, type: 3}
+  - {fileID: 423224303389715938, guid: cbacdd11ed49a5e468754653259249e4, type: 3}
+  spawnChance: 0.1
 --- !u!1 &5047762049311223859
 GameObject:
   m_ObjectHideFlags: 0

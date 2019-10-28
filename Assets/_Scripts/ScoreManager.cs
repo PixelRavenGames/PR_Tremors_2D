@@ -11,6 +11,8 @@ public class ScoreManager : MonoBehaviour
     private float[] scores;
     private int[] scoreOrder;
     public TextMeshProUGUI[] scoreIndicators;
+    public bool GameActive = true;
+    
     void Start()
     {
         scores = new float[PlayerManager.instance.humans.Length];
@@ -30,12 +32,20 @@ public class ScoreManager : MonoBehaviour
 
     void Update()
     {
+        if (!GameActive)
+        {
+            return;
+        }
+        
+        var multipliers = new float[PlayerManager.instance.humans.Length];
+            
         for(var i = 0; i < scores.Length; i++)
         {
             var human = PlayerManager.instance.humans[i];
             if (human.IsAlive())
             {
-                scores[i] += Time.deltaTime * (Mathf.Max(1, human.transform.position.y - groundY));
+                multipliers[i] = Mathf.Max(1, human.transform.position.y - groundY);
+                scores[i] += Time.deltaTime * multipliers[i];
             }
         }
 
@@ -44,11 +54,16 @@ public class ScoreManager : MonoBehaviour
 
         scoreOrder = sorted.Select(x => x.Key).ToArray();
 
-        foreach (var i in scoreOrder)
+        for (var place = 0; place < scoreOrder.Length; place++)
         {
-            if (i < scoreIndicators.Length)
+            var score_i = scoreOrder[place];
+            if (score_i < scoreIndicators.Length)
             {
-                scoreIndicators[i].gameObject.transform.SetAsLastSibling();
+                var fontSizes = new float[] {14, 13, 12, 11};
+                
+                scoreIndicators[score_i].fontSize = place < fontSizes.Length ? fontSizes[place] : fontSizes[fontSizes.Length - 1];
+                
+                scoreIndicators[score_i].gameObject.transform.SetAsLastSibling();
             }
         }
 
@@ -56,7 +71,9 @@ public class ScoreManager : MonoBehaviour
         {
             if (i < scores.Length)
             {
-                scoreIndicators[i].text = $"P{i + 1}: {(int) (scores[i] * 10)}";
+                var multiplier = multipliers[i].ToString("F1");
+                var score = scores[i].ToString("F0");
+                scoreIndicators[i].text = $"P{i + 1} x{multiplier}\n{score}";
             }
         }
     }
