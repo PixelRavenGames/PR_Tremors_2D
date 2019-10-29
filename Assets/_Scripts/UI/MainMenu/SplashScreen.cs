@@ -21,15 +21,15 @@ public class SplashScreen : MonoBehaviour {
 	}
 
 	void Update() {
-		if (!splashScreen.interactable && Input.anyKeyDown) {
+		if (splashScreen.interactable && Input.anyKeyDown) {
 			gotoMainMenu = true;
 		}
 		
 		if (gotoMainMenu) {
 			time += Time.deltaTime * timeScale;
 
-			splashScreen.alpha = time;
-			mainMenu.alpha = 1 - time;
+			splashScreen.alpha = 1 - time;
+			mainMenu.alpha = time;
 
 			if (time >= 1) {
 				mainMenu.interactable = true;
