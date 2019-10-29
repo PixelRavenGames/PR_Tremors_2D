@@ -143,6 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionForce: 8
   damageThreshold: 0.75
+  hitsToDestroy: 2147483647
   particleEffectOnHit: 1
   particles:
     oneTimeOnly: 1
@@ -150,3 +151,10 @@ MonoBehaviour:
     - particles: {fileID: 7889024515154928233, guid: b59a07a90b1acc14b85dfba28522c25e,
         type: 3}
       offset: {x: 0, y: 0.241}
+      shouldParent: 0
+  damageSprite: 1
+  sprites:
+    chanceOfBreaking: 1
+    sprites:
+    - {fileID: 21300000, guid: f15c3b83e038390419c329f023dbd673, type: 3}
+    - {fileID: 21300000, guid: 7b53dc7bf3f3c1949911d4406042c1b3, type: 3}

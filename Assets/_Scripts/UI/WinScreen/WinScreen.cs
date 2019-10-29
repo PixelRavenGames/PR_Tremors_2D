@@ -85,7 +85,7 @@ public class WinScreen : MonoBehaviour {
 		Time.timeScale = 0.5f;
 		shouldShow = true;
 
-		
+		scoreManager.GameActive = false;
 	}
 
 	private PlayerScore[] SortPlayerScores(ref PlayerScore[] scores) {
