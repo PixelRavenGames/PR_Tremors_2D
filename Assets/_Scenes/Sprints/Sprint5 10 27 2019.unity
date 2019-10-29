@@ -1886,6 +1886,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4727562e515fa4144a396b1ccfa6f43d, type: 3}
+--- !u!114 &178996612 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2012131833730500522, guid: 4727562e515fa4144a396b1ccfa6f43d,
+    type: 3}
+  m_PrefabInstance: {fileID: 178996611}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88c2c5cceb2e5ac44bf84e7a854f61a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &201078905
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9333,7 +9345,7 @@ PrefabInstance:
         type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 178996612}
     - target: {fileID: 616097271, guid: 81f4b126896c9e04793432b02cb5d868, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

@@ -50,7 +50,10 @@ public class WinScreen : MonoBehaviour {
 	}
 
 	void Update() {
-		if (shouldShow) transform.position = Vector2.Lerp(transform.position, startPos, Time.unscaledDeltaTime * (1/enterTime));
+		if (shouldShow) {
+			transform.position = Vector2.Lerp(transform.position, startPos, Time.unscaledDeltaTime * (1 / enterTime));
+			if (Vector2.Distance(transform.position, startPos) < 10) EventSystem.current.SetSelectedGameObject(retry.gameObject);
+		}
 	}
 
 	public void OnWin(int winner) {
@@ -82,7 +85,7 @@ public class WinScreen : MonoBehaviour {
 		Time.timeScale = 0.5f;
 		shouldShow = true;
 
-		EventSystem.current.SetSelectedGameObject(retry.gameObject);
+		
 	}
 
 	private PlayerScore[] SortPlayerScores(ref PlayerScore[] scores) {
